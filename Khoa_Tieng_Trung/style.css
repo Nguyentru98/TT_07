@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+.plr20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.brr150 {
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+.brl150 {
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+.ttx-30{
+  transform: translateX(-30%);
+}
+.ttx30{
+  transform: translateX(30%); 
+}
+

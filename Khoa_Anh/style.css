@@ -1,0 +1,12 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+  }
+  .plr20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
