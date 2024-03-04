@@ -106,7 +106,7 @@
                                                                 $("<a>", { class: "db ", icon: "home::vam fs2", href: "/" }),
                                                                 menuChinh.map(function (i) {
                                                                     return $("<div>", { class: "col-md-2" }).append(
-                                                                        $("<div>", { class: "db tac w1 fs1 fwb", text: dữLiệu.tên(i, "ụ") })
+                                                                        $("<a>", { class: "db tac w1 fs1 fwb db", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
                                                                     )
 
                                                                 })
@@ -114,443 +114,444 @@
                                                         )
                                                     )
                                                 ),
-                                                // banner
-                                                $("<div>", { class: "w1", }).append(
-                                                    $("<div>", { class: "bgsc bgrn bgpc pb31  ", style: "background-image:url('/assets/slide-ban.jpg')" })
-                                                ),
-                                                //khối tìm kiếm
-                                                $("<div>", { class: "col-md-4 col-xs-6 ptb15 ptb10-xs df jcsc brr30 bgcrd tt-50 bóng", }).append(
-                                                    $("<div>", { class: "df aic w1 jcsc", }).append(
-                                                        $("<input>", { class: "bn on ôTìmkiếm bgcf bra25 w70 pa10 pa5-xs", placeholder: "Tìm kiếm" }),
-                                                        $("<div>", { class: "cf plr10", icon: "search::vam fs15" })
-                                                    )
-                                                ),
-                                                // giới thiệu
-                                                $("<div>", { class: "container", }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi o08h", text: dữLiệu.tên(13674, "ụ"), href: dữLiệu.url(13674, "ụ") }),
-                                                    $("<div>", { class: "df ", }).xửLý(
-                                                        "đốiTượng.tải.bàiViết",
-                                                        {
-                                                            d: {
-                                                                thuộcTính: {
-                                                                    ụ: [13674, "~|"],
-                                                                    p: "1"
-                                                                },
-                                                                sắpXếp: "ấ",
+                                                // thân
+                                                thân = $("<div>", { class: "thân", }).append(
+                                                    // banner
+                                                    $("<div>", { class: "w1", }).append(
+                                                        $("<div>", { class: "bgsc bgrn bgpc pb31  ", style: "background-image:url('/assets/slide-ban.jpg')" })
+                                                    ),
+                                                    //khối tìm kiếm
+                                                    $("<div>", { class: "col-md-4 col-xs-6 ptb15 ptb10-xs df jcsc brr30 bgcrd tt-50 bóng z9k", }).append(
+                                                        $("<div>", { class: "df aic w1 jcsc khốiTìmKiếm ", }).append(
+                                                            $("<input>", { class: "ôTìmkiếm bn on bgcf bra25 w70 pa10 pa5-xs", placeholder: "Tìm kiếm" }),
+                                                            $("<div>", { class: "cf plr10", icon: "search::vam fs15" })
+                                                        )
+                                                    ),
 
-                                                            }
+                                                    // giới thiệu
+                                                    $("<div>", { class: "container", }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi o08h", text: dữLiệu.tên(13674, "ụ"), href: dữLiệu.url(13674, "ụ") }),
+                                                        $("<div>", { class: "df ", }).xửLý(
+                                                            "đốiTượng.tải.bàiViết",
+                                                            {
+                                                                d: {
+                                                                    thuộcTính: {
+                                                                        ụ: [13674, "~|"],
+                                                                        p: "1"
+                                                                    },
+                                                                    sắpXếp: "ấ",
 
-                                                        }, { cache: true, onCache: true, bảng: "bàiViết", delay: 500 },
-                                                        function (bv) {
-                                                            var t = $(this)
-                                                            t.empty().append(
-                                                                (bv || []).map(function (i) {
-                                                                    return $("<div>", { class: "df jcsc fww", }).append(
-                                                                        $("<div>", { class: "col-md-4 df jcsc", }).append(
-                                                                            $("<div>", { class: "bra50 wh256 bsda pa10 bcrd", }).append(
-                                                                                $("<div>", { class: " b1s wh1 bra50 pa10 bsda bcrd", }).append(
-                                                                                    $("<div>", { class: "bgsc bgrn bgpc wh1 bra50", }).ảnh(i, "ế", true)
+                                                                }
+
+                                                            }, { cache: true, onCache: true, bảng: "bàiViết", delay: 500 },
+                                                            function (bv) {
+                                                                var t = $(this)
+                                                                t.empty().append(
+                                                                    (bv || []).map(function (i) {
+                                                                        return $("<div>", { class: "df jcsc fww", }).append(
+                                                                            $("<div>", { class: "col-md-4 df jcsc", }).append(
+                                                                                $("<div>", { class: "bra50 wh256 bsda pa10 bcrd", }).append(
+                                                                                    $("<div>", { class: " b1s wh1 bra50 pa10 bsda bcrd", }).append(
+                                                                                        $("<div>", { class: "bgsc bgrn bgpc wh1 bra50", }).ảnh(i, "ế", true)
+                                                                                    )
                                                                                 )
-                                                                            )
-                                                                        ),
-                                                                        $("<div>", { class: "col-md-7 df", }).append(
-                                                                            $("<div>", { class: "col-xs-2", }).append(
-                                                                                $("<img>", { class: "pa t0 l0 wh50", src: "/assets/gt_1.jpg" }),
                                                                             ),
-                                                                            $("<div>", { class: "col-xs-8 df aic pa15-xs fs13 fs09-xs", text: dữLiệu.môTả(i, "ế", 600) }),
-                                                                            $("<div>", { class: "col-xs-2", }).append(
-                                                                                $("<img>", { class: "pa b0 r0 wh50", src: "/assets/gt_2.jpg" }),
+                                                                            $("<div>", { class: "col-md-7 df", }).append(
+                                                                                $("<div>", { class: "col-xs-2", }).append(
+                                                                                    $("<img>", { class: "pa t0 l0 wh50", src: "/assets/gt_1.jpg" }),
+                                                                                ),
+                                                                                $("<div>", { class: "col-xs-8 df aic pa15-xs fs13 fs09-xs", text: dữLiệu.môTả(i, "ế", 600) }),
+                                                                                $("<div>", { class: "col-xs-2", }).append(
+                                                                                    $("<img>", { class: "pa b0 r0 wh50", src: "/assets/gt_2.jpg" }),
+                                                                                )
                                                                             )
                                                                         )
-                                                                    )
 
 
-                                                                })
-                                                            )
-                                                        }
+                                                                    })
+                                                                )
+                                                            }
 
 
-                                                    )
-                                                ),
-                                                // những con số
-                                                $("<div>", { class: " mt50 w1" }).append(
-                                                    $("<div>", { class: "container df jcsb cf lh15 pa25 fwb" }).append(
-                                                        $("<div>", { class: "col-xs-12 df" }).append(
-                                                            $("<div>", { class: "wh1 fs06-xs" }).append(
-                                                                bốCục.chờHiện([
-                                                                    {
-                                                                        ê: "Năm thành lập",
-                                                                        số: 64,
-                                                                        z: "",
-                                                                        bo: lÀ("MD") ? "ptb10" : ""//là md chính là kích thước màn hình md
+                                                        )
+                                                    ),
+                                                    // những con số
+                                                    $("<div>", { class: " mt50 w1" }).append(
+                                                        $("<div>", { class: "container df jcsb cf lh15 pa25 fwb" }).append(
+                                                            $("<div>", { class: "col-xs-12 df" }).append(
+                                                                $("<div>", { class: "wh1 fs06-xs" }).append(
+                                                                    bốCục.chờHiện([
+                                                                        {
+                                                                            ê: "Năm thành lập",
+                                                                            số: 64,
+                                                                            z: "",
+                                                                            bo: lÀ("MD") ? "ptb10" : ""//là md chính là kích thước màn hình md
 
-                                                                    },
-                                                                    {
-                                                                        ê: "Sinh viên ra trường có việc làm",
-                                                                        số: 70,
-                                                                        z: "%",
-                                                                        bo: lÀ("MD") ? "ptb10" : ""//là md chính là kích thước màn hình md
-
-                                                                    },
-                                                                    {
-                                                                        ê: "Số lượng sinh viên đào tạo",
-                                                                        số: 14000,
-                                                                        z: "",
-                                                                        bo: lÀ("MD") ? "ptb10" : ""
-                                                                    },
-                                                                    {
-                                                                        ê: "Số đối tác trong và ngoài nước",
-                                                                        số: 15,
-                                                                        z: "+",
-                                                                        bo: lÀ("MD") ? "ptb10" : ""
-                                                                    },
-
-                                                                ],
-                                                                    {
-                                                                        sửaLớp: {
-                                                                            dòng: "crd",
-                                                                            đếm: "br3 bss ptb15"
                                                                         },
-                                                                    }
+                                                                        {
+                                                                            ê: "Sinh viên ra trường có việc làm",
+                                                                            số: 70,
+                                                                            z: "%",
+                                                                            bo: lÀ("MD") ? "ptb10" : ""//là md chính là kích thước màn hình md
+
+                                                                        },
+                                                                        {
+                                                                            ê: "Số lượng sinh viên đào tạo",
+                                                                            số: 14000,
+                                                                            z: "",
+                                                                            bo: lÀ("MD") ? "ptb10" : ""
+                                                                        },
+                                                                        {
+                                                                            ê: "Số đối tác trong và ngoài nước",
+                                                                            số: 15,
+                                                                            z: "+",
+                                                                            bo: lÀ("MD") ? "ptb10" : ""
+                                                                        },
+
+                                                                    ],
+                                                                        {
+                                                                            sửaLớp: {
+                                                                                dòng: "crd",
+                                                                                đếm: "br3 bss ptb15"
+                                                                            },
+                                                                        }
+                                                                    ),
                                                                 ),
                                                             ),
-                                                        ),
 
+                                                        ),
                                                     ),
-                                                ),
-                                                // chương trình đào tạo
-                                                $("<div>", { class: " mt50 w1 container" }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13675, "ụ"), href: dữLiệu.url(13674, "ụ") }),
-                                                    $("<div>", { class: "df fww" }).append(
-                                                        $("<div>", { class: "col-md-6 col-xs-12  df jcsc" }).append(
-                                                            $("<div>", { class: "col-md-6 col-xs-12 plr15-xs df fdc aic bgso bgrn bgpc crd", style: "background-image:url('/assets/bg-dt.jpg')" }).each(function () {
-                                                                var t = $(this)
-                                                                CẦN.db("chuyênLực.13675", function (i) {
-                                                                    t.empty().append(
-                                                                        (i || []).map(function (el) {
-                                                                            return $("<a>", { class: "b1s ptb15  fs12 fwb w1 bra30 db tac mtb25 bgcr4h cfh", text: dữLiệu.tên(el, "ụ"), href: "/" })
-                                                                        })
-                                                                    )
+                                                    // chương trình đào tạo
+                                                    $("<div>", { class: " mt50 w1 container" }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13675, "ụ"), href: dữLiệu.url(13674, "ụ") }),
+                                                        $("<div>", { class: "df fww" }).append(
+                                                            $("<div>", { class: "col-md-6 col-xs-12  df jcsc" }).append(
+                                                                $("<div>", { class: "col-md-6 col-xs-12 plr15-xs df fdc aic bgso bgrn bgpc crd", style: "background-image:url('/assets/bg-dt.jpg')" }).each(function () {
+                                                                    var t = $(this)
+                                                                    CẦN.db("chuyênLực.13675", function (i) {
+                                                                        t.empty().append(
+                                                                            (i || []).map(function (el) {
+                                                                                return $("<a>", { class: "b1s ptb15  fs12 fwb w1 bra30 db tac mtb25 bgcr4h cfh", text: dữLiệu.tên(el, "ụ"), href: dữLiệu.url(el, "ụ") })
+                                                                            })
+                                                                        )
+
+                                                                    })
+
+
 
                                                                 })
-
-
-
-                                                            })
+                                                            ),
+                                                            $("<div>", { class: "col-md-6 col-xs-12 ptb25-xs" }).append(
+                                                                $("<div>", { class: "df fdc h1 jcsc" }).append(
+                                                                    $("<div>", { class: "pb32 bgso bgrn bgpc ", style: "background-image:url('/assets/ctdt.jpg')" }),
+                                                                    $("<div>", { class: "ptb15 crd fwb fs12 w1 tac ", text: "Chứng nhận kiểm định chất lượng đào tạo" })
+                                                                )
+                                                            ),
                                                         ),
-                                                        $("<div>", { class: "col-md-6 col-xs-12 ptb25-xs" }).append(
-                                                            $("<div>", { class: "df fdc h1 jcsc" }).append(
-                                                                $("<div>", { class: "pb32 bgso bgrn bgpc ", style: "background-image:url('/assets/ctdt.jpg')" }),
-                                                                $("<div>", { class: "ptb15 crd fwb fs12 w1 tac ", text: "Chứng nhận kiểm định chất lượng đào tạo" })
-                                                            )
-                                                        ),
+
                                                     ),
+                                                    // thông báo
+                                                    $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13740, "ụ"), href: dữLiệu.url(13740, "ụ") }),
+                                                    $("<div>", { class: "bgcrd w1" }).append(
+                                                        $("<div>", { class: "container df jcsb menu-thongBao" }).each(function () {
+                                                            var t = $(this);
+                                                            CẦN.db("chuyênLực.13740", function (i) {
+                                                                t.empty().append(
+                                                                    (i || []).map(function (e, index) {
+                                                                        return $("<div>", { class: "col-md-2 MàuMenu col-xs-12 ptb10 df jcsc aic db cpi crd bgcf bra20 pr tty05 bóng fwb bgcr4h cfh fs09-xs menu" + index, text: dữLiệu.tên(e, "ụ") })
+                                                                            .on("click", function () {
+                                                                                $(".menu-thongBao").find(".bgcrd").sửaLớp("-bgcrd -cf");
+                                                                                $(this).sửaLớp("bgcrd -crd cf");
+                                                                                xửLý("đốiTượng.tải.bàiViết",
+                                                                                    {
+                                                                                        d: {
+                                                                                            thuộcTính: {
+                                                                                                ụ: $.gộp([e], khôngGian.chuyênMục.sau(e), ["~|"]), // lấy bài viết mới nhất tất cả các chuyên mục con trong cm to
+                                                                                                p: "1"
+                                                                                            },
+                                                                                            sắpXếp: "ấ",
+                                                                                            giớiHạn: 4,
 
-                                                ),
-                                                // thông báo
-                                                $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13740, "ụ"), href: dữLiệu.url(13740, "ụ") }),
-                                                $("<div>", { class: "bgcrd w1" }).append(
-                                                    $("<div>", { class: "container df jcsb menu-thongBao" }).each(function () {
-                                                        var t = $(this);
-                                                        CẦN.db("chuyênLực.13740", function (i) {
-                                                            t.empty().append(
-                                                                (i || []).map(function (e, index) {
-                                                                    return $("<div>", { class: "col-md-2 MàuMenu col-xs-12 ptb10 df jcsc aic db cpi crd bgcf bra20 pr tty05 bóng fwb bgcr4h cfh fs09-xs menu" + index, text: dữLiệu.tên(e, "ụ") })
-                                                                        .on("click", function () {
-                                                                            $(".menu-thongBao").find(".bgcrd").sửaLớp("-bgcrd -cf");
-                                                                            $(this).sửaLớp("bgcrd -crd cf");
-                                                                            // e là menu tbao
-                                                                            xửLý("đốiTượng.tải.bàiViết",
-                                                                                {
-                                                                                    d: {
-                                                                                        thuộcTính: {
-                                                                                            ụ: $.gộp([e], khôngGian.chuyênMục.sau(e), ["~|"]), // lấy bài viết mới nhất tất cả các chuyên mục con trong cm to
-                                                                                            p: "1"
                                                                                         },
-                                                                                        sắpXếp: "ấ",
-                                                                                        giớiHạn: 5,
-
-                                                                                    },
-                                                                                }, { cache: true, onCache: true, bảng: "bàiViết", delay: 500 },
-                                                                                function (bv) {
-                                                                                    cl(bv, "mảng bvvvvvvv");
-                                                                                    if (bv == null) {
-                                                                                        return $(".ndThongBao").empty().append(
-                                                                                            $("<div>", { text: "Không có bài viết" }),
-                                                                                        )
-                                                                                    } else {
-                                                                                        (bv || []).map(function (e, index) {
-                                                                                            cl(e, "bàivvvvvvvvvvvvv")
-                                                                                            if (index == 0) {
-                                                                                                return $(".baiMoiNhat").empty().append(
-                                                                                                    $("<div>", { class: "bgcf plr25 ptb10 bóng" }).append(
-                                                                                                        $("<div>", { class: "bgrn bgsc bgpc pb32" }).ảnh(e, "ế", true),
-                                                                                                        $("<div>", { class: "ptb10 ttu fs13 fs1-xs fwb", text: dữLiệu.tên(e, "ế") }),
-                                                                                                        $("<div>", { class: "df w1 jcsb aic" }).append(
-                                                                                                            (Jd(config("bàiViết." + e + ".ụ")) || []).map(function (item, ind) {
-                                                                                                                return $("<div>", { class: "pa10 bra20 b1s crd", text: dữLiệu.tên(item, "ụ") })
-                                                                                                            }),
-                                                                                                            $("<smail>", { class: "db", text: iDate(config("bàiViết." + e + ".ờ"), "DD/MM/YYYY") }),
-                                                                                                        )
-                                                                                                    )
-                                                                                                )
-                                                                                            } else {
-                                                                                                return $(".baiCuHon").append(
-                                                                                                    $("<div>", { class: "df pa10 w1 bóng" }).append(
-                                                                                                        $("<div>", { class: "col-xs-4  bgso bgrn bgpc" }).ảnh(e, "ế"),
-                                                                                                        $("<div>", { class: "col-xs-8 pl15" }).append(
-                                                                                                            $("<div>", { class: "fwb fs12 fs1-xs", text: dữLiệu.tên(e, "ế") }),
-                                                                                                            $("<div>", { class: "df w1 jcsb mt25 aic" }).append(
-                                                                                                                (Jd(config("bàiViết." + e + ".ụ")) || []).map(function (item, ind) {
-                                                                                                                    return $("<div>", { class: "pa10 bra20 b1s crd", text: dữLiệu.tên(item, "ụ") })
+                                                                                    }, { cache: true, onCache: true, bảng: "bàiViết", delay: 500 },
+                                                                                    function renderArticles(bv) {
+                                                                                        $(".ndThongBao").empty();
+                                                                                        if (bv == null || bv.length === 0) {
+                                                                                            $(".ndThongBao").append(
+                                                                                                $("<div>", { text: "Không có bài viết" })
+                                                                                            );
+                                                                                        } else {
+                                                                                            $(".ndThongBao").append(
+                                                                                                $("<div>", { class: "baiMoiNhat col-md-6 col-xs-12 plr15-xs pr15 pr15" }),
+                                                                                                $("<div>", { class: "baiCuHon col-md-6 pl15 df fdc jcsb" })
+                                                                                            );
+                                                                                            bv.forEach(function (e, index) {
+                                                                                                if (index === 0) {
+                                                                                                    $(".baiMoiNhat").empty().append(
+                                                                                                        $("<div>", { class: "bgcf plr25 ptb10 bóng h1" }).append(
+                                                                                                            $("<div>", { class: "bgrn bgsc bgpc pb32" }).ảnh(e, "ế", true),
+                                                                                                            $("<a>", { class: "ptb10 ttu fs13 fs1-xs fwb db", text: dữLiệu.tên(e, "ế"), href: dữLiệu.url(e, "ế") }),
+                                                                                                            $("<div>", { class: "df w1 jcsb aic" }).append(
+                                                                                                                (Jd(config("bàiViết." + e + ".ụ")) || []).map(function (item) {
+                                                                                                                    return $("<a>", { class: "pa10 bra20 b1s crd db", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") });
                                                                                                                 }),
-                                                                                                                $("<smail>", { class: "db", text: iDate(config("bàiViết." + e + ".ờ"), "DD/MM/YYYY") }),
+                                                                                                                $("<small>", { class: "db", text: iDate(config("bàiViết." + e + ".ờ"), "DD/MM/YYYY") })
                                                                                                             )
-                                                                                                        ),
-                                                                                                    ),
-                                                                                                )
-                                                                                            }
-                                                                                        })
+                                                                                                        )
+                                                                                                    );
+                                                                                                } else {
+                                                                                                    $(".baiCuHon").append(
+                                                                                                        $("<div>", { class: "df pa10 w1 bóng" }).append(
+                                                                                                            $("<div>", { class: "col-xs-4 bgso bgrn bgpc" }).ảnh(e, "ế", true),
+                                                                                                            $("<div>", { class: "col-xs-8 pl15" }).append(
+                                                                                                                $("<a>", { class: "fwb fs12 fs1-xs db", text: dữLiệu.tên(e, "ế"), href: dữLiệu.url(e, "ế") }),
+                                                                                                                $("<div>", { class: "df w1 jcsb mt25 aic" }).append(
+                                                                                                                    (Jd(config("bàiViết." + e + ".ụ")) || []).map(function (item) {
+                                                                                                                        return $("<a>", { class: "pa10 bra20 b1s crd db", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") });
+                                                                                                                    }),
+                                                                                                                    $("<small>", { class: "db", text: iDate(config("bàiViết." + e + ".ờ"), "DD/MM/YYYY") })
+                                                                                                                )
+                                                                                                            )
+                                                                                                        )
+                                                                                                    );
+                                                                                                }
+                                                                                            });
+                                                                                        }
                                                                                     }
-
-                                                                                }
-                                                                            )
-                                                                        })
-                                                                })
-                                                            )
-                                                        })
-                                                    }),
-                                                ),
-                                                // nội dung thông báo
-                                                $("<div>", { class: "nd-tb ptb35 bóng" }).append(
-                                                    $("<div>", { class: "container ndThongBao df fww" }).append(
-                                                        $("<div>", { class: "baiMoiNhat col-md-6 col-xs-12 plr15-xs pr15 pr15" }),
-                                                        // nội dung bài viết mới nhất
-
-                                                        $("<div>", { class: "baiCuHon col-md-6 pl15 df fdc jcsb" })
-                                                        // nội dung các bài viết còn lại 
-                                                    ),
-                                                    $(".nd-tb").chờ(function () {
-                                                        $(".menu0").trigger("click")
-                                                    }, 500)
-                                                ),
-                                                // hợp tác quốc tế
-                                                $("<div>", { class: "mtb25 dn-xs" }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13676, "ụ"), href: dữLiệu.url(13676, "ụ") }),
-                                                    $("<div>", { class: "" }).append(
-                                                        $("<div>", { class: "container df" }).append(
-                                                            $("<div>", { class: "col-md-4" }).append(
-                                                                $("<div>", { class: "pb32  bgrn bpc bgsc ", style: "background-image:url('/assets/tb-1.jpg')" }),
-                                                            ),
-                                                            $("<div>", { class: "col-md-4" }).append(
-                                                                $("<div>", { class: "pb32  bgrn bpc bgsc z9 pr h1", style: "background-image:url('/assets/tb-1.jpg')" }),
-                                                                $("<div>", { class: "pb32 ol z1 bgcrd" }).css("transform", "scale(1.1)"),
-                                                            ),
-                                                            $("<div>", { class: "col-md-4" }).append(
-                                                                $("<div>", { class: "pb32  bgrn bpc bgsc ", style: "background-image:url('/assets/tb-1.jpg')" }),
-                                                            ),
-                                                        )
-                                                    )
-                                                ),
-                                                // nghiên cứu khoa học
-                                                $("<div>", { class: "mt50" }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13677, "ụ"), href: dữLiệu.url(13677, "ụ") }),
-                                                    $("<div>", { class: "df" }).append(
-                                                        $("<div>", { class: "col-md-7 bgcrd brr150 ptb50 df jcsc oh" }).append(
-                                                            $("<div>", { class: "col-md-10 oh" }).xửLý(
-                                                                "đốiTượng.tải.bàiViết",
-                                                                {
-                                                                    d: {
-                                                                        thuộcTính: {
-                                                                            ụ: [13751, "~|"],
-                                                                            p: "1"
-                                                                        },
-                                                                        sắpXếp: "ấ",
-                                                                    }
-
-                                                                },
-                                                                { cache: true, onCache: true, delay: 1000, bảng: "bàiViết" },
-                                                                function (bv) {
-                                                                    var t = $(this);
-                                                                    t.empty().sờLais(
-                                                                        (bv || []).map(function (el, index) {
-                                                                            return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
-                                                                                $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
-                                                                                    $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
-                                                                                    $("<div>", { class: "df fdc jcsb h1" }).append(
-                                                                                        $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
-                                                                                        $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
-                                                                                    )
                                                                                 )
-                                                                            )
-                                                                        }),
-                                                                        {
-                                                                            sửaLớp: {
-                                                                                chứaSờLai: "-ma0-xs,pa0-xs,-pa15",
-                                                                                chứa: "plr50"
-                                                                                // sờLai:"jcsc, -jcsb"
-                                                                                // điềuHướng:"-o0"
-                                                                            },
-                                                                            tựChạy: 2500,
-                                                                            // điềuHướng:là("M")?0:1,
-                                                                            // phụ:true,
-                                                                            lặp: true,
-                                                                            xong: function () {
-                                                                                // $(this).find(".điềuHướng").find(".trái,.phải").sửaLớp("bn,-o05,-bgcf,cf,-btn,"+(là("M")?"-mlr5,mlr-15,":""))
-                                                                            },
-                                                                        }
-                                                                    )
-
-                                                                }
-                                                            ),
-
+                                                                            })
+                                                                    })
+                                                                )
+                                                            })
+                                                        }),
+                                                    ),
+                                                    // nội dung thông báo
+                                                    $("<div>", { class: "nd-tb ptb35 bóng" }).append(
+                                                        $("<div>", { class: "container ndThongBao df fww hmn4" }).append(
+                                                            // nội dung tb
                                                         ),
-                                                        $("<div>", { class: "col-md-5" }).append(
-                                                            $("<div>", { class: "col-md-5 bra25 bgcr bóng ttx-30" }).each(function () {
-                                                                var t = $(this)
-                                                                CẦN.db("chuyênMục.13751", function (i) {
-                                                                    return t.empty().append(
-                                                                        $("<a>", { class: "w1 ptb25 cf tac fs15 db fs1-xs pa10-xs", text: dữLiệu.tên(13751, "ụ"), href: dữLiệu.url(13751, "ụ") })
-                                                                    )
-
-                                                                })
-                                                            }
+                                                        $(".nd-tb").chờ(function () {
+                                                            $(".menu0").trigger("click")
+                                                        }, 500)
+                                                    ),
+                                                    // hợp tác quốc tế
+                                                    $("<div>", { class: "mtb25 dn-xs" }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13676, "ụ"), href: dữLiệu.url(13676, "ụ") }),
+                                                        $("<div>", { class: "bgcrd" }).append(
+                                                            $("<div>", { class: "container df" }).append(
+                                                                $("<div>", { class: "col-md-4" }).append(
+                                                                    $("<div>", { class: "pb32  bgrn bpc bgsc ", style: "background-image:url('/assets/tb-1.jpg')" }),
+                                                                ),
+                                                                $("<div>", { class: "col-md-4" }).append(
+                                                                    $("<div>", { class: "pb32  bgrn bpc bgsc z9 pr h1", style: "background-image:url('/assets/tb-1.jpg')" }),
+                                                                    $("<div>", { class: "pb32 ol z1 bgcrd" }).css("transform", "scale(1.1)"),
+                                                                ),
+                                                                $("<div>", { class: "col-md-4" }).append(
+                                                                    $("<div>", { class: "pb32  bgrn bpc bgsc ", style: "background-image:url('/assets/tb-1.jpg')" }),
+                                                                ),
                                                             )
                                                         )
                                                     ),
-                                                    $("<div>", { class: "df mt50" }).append(
-                                                        $("<div>", { class: "col-md-5 df jcfe aife " }).append(
-                                                            $("<div>", { class: "col-md-5 bra25 bgcr bóng ttx30 z9 " }).each(function () {
-                                                                var t = $(this)
-                                                                CẦN.db("chuyênMục.13752", function (i) {
-                                                                    return t.empty().append(
-                                                                        $("<a>", { class: "w1 ptb25 cf tac fs15 fs1-xs db pa10-xs", text: dữLiệu.tên(13752, "ụ"), href: dữLiệu.url(13752, "ụ") })
-                                                                    )
+                                                    // nghiên cứu khoa học
+                                                    $("<div>", { class: "mt50" }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13677, "ụ"), href: dữLiệu.url(13677, "ụ") }),
+                                                        $("<div>", { class: "df" }).append(
+                                                            $("<div>", { class: "col-md-7 bgcrd brr150 ptb50 df jcsc oh" }).append(
+                                                                $("<div>", { class: "col-md-10 oh" }).xửLý(
+                                                                    "đốiTượng.tải.bàiViết",
+                                                                    {
+                                                                        d: {
+                                                                            thuộcTính: {
+                                                                                ụ: [13751, "~|"],
+                                                                                p: "1"
+                                                                            },
+                                                                            sắpXếp: "ấ",
+                                                                        }
 
-                                                                })
-                                                            }
-                                                            )
-                                                        ),
-                                                        $("<div>", { class: "col-md-7 bgcrd brl150 ptb50 df jcsc oh" }).append(
-                                                            $("<div>", { class: "col-md-10 oh" }).xửLý(
-                                                                "đốiTượng.tải.bàiViết",
-                                                                {
-                                                                    d: {
-                                                                        thuộcTính: {
-                                                                            ụ: [13752, "~|"],
-                                                                            p: "1"
-                                                                        },
-                                                                        sắpXếp: "ấ",
-
-                                                                    }
-
-                                                                },
-                                                                { cache: true, onCache: true, delay: 1000, bảng: "bàiViết" },
-                                                                function (bv) {
-                                                                    var t = $(this);
-                                                                    t.empty().sờLais(
-                                                                        (bv || []).map(function (el, index) {
-                                                                            // var d = config("bàiViết." + el) || {};
-                                                                            return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
-                                                                                $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
-                                                                                    $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
-                                                                                    $("<div>", { class: "df fdc jcsb h1" }).append(
-                                                                                        $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
-                                                                                        $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
+                                                                    },
+                                                                    { cache: true, onCache: true, delay: 1000, bảng: "bàiViết" },
+                                                                    function (bv) {
+                                                                        var t = $(this);
+                                                                        t.empty().sờLais(
+                                                                            (bv || []).map(function (el, index) {
+                                                                                return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
+                                                                                    $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
+                                                                                        $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
+                                                                                        $("<div>", { class: "df fdc jcsb h1" }).append(
+                                                                                            $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
+                                                                                            $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
+                                                                                        )
                                                                                     )
                                                                                 )
-                                                                            )
-                                                                        }),
-                                                                        {
-                                                                            sửaLớp: {
-                                                                                chứaSờLai: "-ma0-xs,pa0-xs,-pa15",
-                                                                                chứa: "plr50"
-                                                                                // sờLai:"jcsc, -jcsb"
-                                                                                // điềuHướng:"-o0"
-                                                                            },
-                                                                            tựChạy: 2500,
-                                                                            // điềuHướng:là("M")?0:1,
-                                                                            // phụ:true,
-                                                                            lặp: true,
-                                                                            xong: function () {
-                                                                                // $(this).find(".điềuHướng").find(".trái,.phải").sửaLớp("bn,-o05,-bgcf,cf,-btn,"+(là("M")?"-mlr5,mlr-15,":""))
-                                                                            },
-                                                                        }
-                                                                    )
+                                                                            }),
+                                                                            {
+                                                                                sửaLớp: {
+                                                                                    chứaSờLai: "-ma0-xs,pa0-xs,-pa15",
+                                                                                    chứa: "plr50"
+                                                                                    // sờLai:"jcsc, -jcsb"
+                                                                                    // điềuHướng:"-o0"
+                                                                                },
+                                                                                tựChạy: 2500,
+                                                                                // điềuHướng:là("M")?0:1,
+                                                                                // phụ:true,
+                                                                                lặp: true,
+                                                                                xong: function () {
+                                                                                    // $(this).find(".điềuHướng").find(".trái,.phải").sửaLớp("bn,-o05,-bgcf,cf,-btn,"+(là("M")?"-mlr5,mlr-15,":""))
+                                                                                },
+                                                                            }
+                                                                        )
 
+                                                                    }
+                                                                ),
+
+                                                            ),
+                                                            $("<div>", { class: "col-md-5" }).append(
+                                                                $("<div>", { class: "col-md-5 bra25 bgcr bóng ttx-30" }).each(function () {
+                                                                    var t = $(this)
+                                                                    CẦN.db("chuyênMục.13751", function (i) {
+                                                                        return t.empty().append(
+                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 db fs1-xs pa10-xs", text: dữLiệu.tên(13751, "ụ"), href: dữLiệu.url(13751, "ụ") })
+                                                                        )
+
+                                                                    })
                                                                 }
-                                                            ),
+                                                                )
+                                                            )
+                                                        ),
+                                                        $("<div>", { class: "df mt50" }).append(
+                                                            $("<div>", { class: "col-md-5 df jcfe aife " }).append(
+                                                                $("<div>", { class: "col-md-5 bra25 bgcr bóng ttx30 z9 " }).each(function () {
+                                                                    var t = $(this)
+                                                                    CẦN.db("chuyênMục.13752", function (i) {
+                                                                        return t.empty().append(
+                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 fs1-xs db pa10-xs", text: dữLiệu.tên(13752, "ụ"), href: dữLiệu.url(13752, "ụ") })
+                                                                        )
 
-                                                        ),
-
-                                                    )
-                                                ),
-                                                // hoạt động ngoại khóa
-                                                $("<div>", { class: "mt50 dn-xs" }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13764, "ụ"), href: dữLiệu.url(13764, "ụ") }),
-                                                    $("<div>", { class: "container ptb25" }).append(
-                                                        $("<div>", { class: "col-md-4 df fdc aife" }).append(
-                                                            $("<div>", { class: "col-md-7 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
-                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
-                                                                $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                            ).css("transform", "rotate(349deg)"),
-                                                            $("<div>", { class: "col-md-6 mt50 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
-                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
-                                                                $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                            ).css("transform", "rotate(10deg)"),
-                                                        ),
-                                                        $("<div>", { class: "col-md-4" }).append(
-                                                            $("<div>", { class: "col-md-12 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
-                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
-                                                                $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                            ),
-                                                        ),
-                                                        $("<div>", { class: "col-md-4 plr15" }).append(
-                                                            $("<div>", { class: "col-md-8 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
-                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
-                                                                $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                            ).css("transform", "rotate(10deg)"),
-                                                            $("<div>", { class: "col-md-6 mt25 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
-                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
-                                                                $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                            ),
-                                                        ),
-                                                    )
-                                                ).css("background-color", "antiquewhite"),
-
-                                                // tiện ích khác
-                                                $("<div>", { class: "mt50" }).append(
-                                                    $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13764, "ụ"), href: dữLiệu.url(13764, "ụ") }),
-                                                    $("<div>", { class: "container df fdc" }).append(
-                                                        $("<div>", { class: "crd df fww" }).append(
-                                                            $("<div>", { class: "col-md-6 col-xs-12" }).append(
-                                                                $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
-                                                                    $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "description" }),
-                                                                    $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "mẫu đơn hành chính" }),
+                                                                    })
+                                                                }
                                                                 )
                                                             ),
-                                                            $("<div>", { class: "col-md-6 col-xs-12" }).append(
-                                                                $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
-                                                                    $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "menu_book" }),
-                                                                    $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "Sổ tay sinh viên" }),
-                                                                )
-                                                            ),
-                                                        ),
-                                                        $("<div>", { class: "crd df fww" }).append(
-                                                            $("<div>", { class: "col-md-6 col-xs-12" }).append(
-                                                                $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
-                                                                    $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "badge" }),
-                                                                    $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "tuyển dụng" }),
-                                                                )
-                                                            ),
-                                                            $("<div>", { class: "col-md-6 col-xs-12" }).append(
-                                                                $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
-                                                                    $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "perm_contact_calendar" }),
-                                                                    $("<div>", { class: "fs15 fs1-xs  fwb ttu plr15", text: "lịch trực bcn" }),
-                                                                )
-                                                            ),
-                                                        ),
+                                                            $("<div>", { class: "col-md-7 bgcrd brl150 ptb50 df jcsc oh" }).append(
+                                                                $("<div>", { class: "col-md-10 oh" }).xửLý(
+                                                                    "đốiTượng.tải.bàiViết",
+                                                                    {
+                                                                        d: {
+                                                                            thuộcTính: {
+                                                                                ụ: [13752, "~|"],
+                                                                                p: "1"
+                                                                            },
+                                                                            sắpXếp: "ấ",
 
+                                                                        }
+
+                                                                    },
+                                                                    { cache: true, onCache: true, delay: 1000, bảng: "bàiViết" },
+                                                                    function (bv) {
+                                                                        var t = $(this);
+                                                                        t.empty().sờLais(
+                                                                            (bv || []).map(function (el, index) {
+                                                                                // var d = config("bàiViết." + el) || {};
+                                                                                return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
+                                                                                    $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
+                                                                                        $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
+                                                                                        $("<div>", { class: "df fdc jcsb h1" }).append(
+                                                                                            $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
+                                                                                            $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
+                                                                                        )
+                                                                                    )
+                                                                                )
+                                                                            }),
+                                                                            {
+                                                                                sửaLớp: {
+                                                                                    chứaSờLai: "-ma0-xs,pa0-xs,-pa15",
+                                                                                    chứa: "plr50"
+                                                                                    // sờLai:"jcsc, -jcsb"
+                                                                                    // điềuHướng:"-o0"
+                                                                                },
+                                                                                tựChạy: 2500,
+                                                                                // điềuHướng:là("M")?0:1,
+                                                                                // phụ:true,
+                                                                                lặp: true,
+                                                                                xong: function () {
+                                                                                    // $(this).find(".điềuHướng").find(".trái,.phải").sửaLớp("bn,-o05,-bgcf,cf,-btn,"+(là("M")?"-mlr5,mlr-15,":""))
+                                                                                },
+                                                                            }
+                                                                        )
+
+                                                                    }
+                                                                ),
+
+                                                            ),
+
+                                                        )
+                                                    ),
+                                                    // hoạt động ngoại khóa
+                                                    $("<div>", { class: "mt50 dn-xs" }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13764, "ụ"), href: dữLiệu.url(13764, "ụ") }),
+                                                        $("<div>", { class: "container ptb25" }).append(
+                                                            $("<div>", { class: "col-md-4 df fdc aife" }).append(
+                                                                $("<div>", { class: "col-md-7 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
+                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
+                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                                ).css("transform", "rotate(349deg)"),
+                                                                $("<div>", { class: "col-md-6 mt50 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
+                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
+                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                                ).css("transform", "rotate(10deg)"),
+                                                            ),
+                                                            $("<div>", { class: "col-md-4" }).append(
+                                                                $("<div>", { class: "col-md-12 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
+                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
+                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                                ),
+                                                            ),
+                                                            $("<div>", { class: "col-md-4 plr15" }).append(
+                                                                $("<div>", { class: "col-md-8 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
+                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
+                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                                ).css("transform", "rotate(10deg)"),
+                                                                $("<div>", { class: "col-md-6 mt25 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(/assets/bg_hdnk.jpg)" }).append(
+                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(/assets/gioi_thieu.jpg)" }),
+                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                                ),
+                                                            ),
+                                                        )
+                                                    ).css("background-color", "antiquewhite"),
+
+                                                    // tiện ích khác
+                                                    $("<div>", { class: "mt50" }).append(
+                                                        $("<a>", { class: "df w1 jcsc fwb fs2 fs15-xs ptb25 mt25 crd db cpi ", text: dữLiệu.tên(13764, "ụ"), href: dữLiệu.url(13764, "ụ") }),
+                                                        $("<div>", { class: "container df fdc" }).append(
+                                                            $("<div>", { class: "crd df fww" }).append(
+                                                                $("<div>", { class: "col-md-6 col-xs-12" }).append(
+                                                                    $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
+                                                                        $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "description" }),
+                                                                        $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "mẫu đơn hành chính" }),
+                                                                    )
+                                                                ),
+                                                                $("<div>", { class: "col-md-6 col-xs-12" }).append(
+                                                                    $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
+                                                                        $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "menu_book" }),
+                                                                        $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "Sổ tay sinh viên" }),
+                                                                    )
+                                                                ),
+                                                            ),
+                                                            $("<div>", { class: "crd df fww" }).append(
+                                                                $("<div>", { class: "col-md-6 col-xs-12" }).append(
+                                                                    $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
+                                                                        $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "badge" }),
+                                                                        $("<div>", { class: "fs15 fs1-xs fwb ttu plr15", text: "tuyển dụng" }),
+                                                                    )
+                                                                ),
+                                                                $("<div>", { class: "col-md-6 col-xs-12" }).append(
+                                                                    $("<div>", { class: "pa15 df aic b1s bóng ma15" }).append(
+                                                                        $("<div>", { class: "fs4 fs2-xs bra50 pa10 bgcrd cf df", icon: "perm_contact_calendar" }),
+                                                                        $("<div>", { class: "fs15 fs1-xs  fwb ttu plr15", text: "lịch trực bcn" }),
+                                                                    )
+                                                                ),
+                                                            ),
+
+                                                        )
                                                     )
                                                 ),
                                                 // footer
@@ -602,8 +603,99 @@
 
                                                 ),
 
-                                            )// end wrapper
+                                            ),// end wrapper
+                                                $(document).chờKhóa(  //Chạy hàm callback sau khi sự kiện được kích hoạt với thời gian 1s như bên dưới
+                                                    "keyup",
+                                                    ".ôTìmkiếm",
+                                                    function () {
+                                                        var iTổng = 13538, // Khổng gian tổng chứa các không gian con trên website
+                                                            từKhóa = $(this).val(),//lấy dữ liệu từ ô tìm kiếm
+                                                            ụTổng = khôngGian.chuyênMục.sau(iTổng) || []; // Lấy tất cả chuyên mục trên website
 
+                                                        $(".bàiViếtTìmKiếm").remove(); //xóa phần tử bàiViếtTìmKiếm
+                                                        if (!empty(từKhóa)) {
+                                                            $(".khốiTìmKiếm").append(
+                                                                $("<div>", {
+                                                                    class: "col-xs-12 pai r0 t1 hmx3 bgcf z99 oh bw1 bss bca mt10 bàiViếtTìmKiếm bóng",
+                                                                }).append(
+                                                                    $("<div>", { class: "ps l50 ttx mtb10 wh64" }).append(
+                                                                        $("<div>", {
+                                                                            class: "bw10 bss bcc bra50 wh1 spin aci",
+                                                                            style: "border-top: 10px solid #be4056;",
+                                                                        })
+                                                                    )
+                                                                )
+                                                            );
+                                                            xửLý(
+                                                                "đốiTượng.tải.bàiViết",
+                                                                {
+                                                                    d:
+                                                                    {
+                                                                        từKhóa: [từKhóa, ["ê"]],
+                                                                        thuộcTính: { ụ: $.gộp([], ụTổng, ["~|"]), p: "1" },
+                                                                        sắpXếp: "ấ-",
+                                                                        giớiHạn: 20,
+                                                                    },
+                                                                },
+                                                                function (i) {
+                                                                    if (!empty(i)) {
+                                                                        CẦN.db("bàiViết." + i, function () {
+                                                                            $(".bàiViếtTìmKiếm").remove();
+                                                                            $(".khốiTìmKiếm").append(
+                                                                                $("<div>", {
+                                                                                    class: "col-xs-12 hmx4 pai r0 t1 bgcf z99 oya bw1 bss bca bóng bàiViếtTìmKiếm",
+                                                                                }).append(
+                                                                                    i.map(function (á, à) {
+                                                                                        var v = config("bàiViết." + á) || {};
+                                                                                        if (!empty(v))
+                                                                                            return $("<a>", {
+                                                                                                href: dữLiệu.url(á, "ế"),
+                                                                                                class: "col-xs-12 cl1h c1",
+                                                                                                title: dữLiệu.tên(á, "ế"),
+                                                                                            }).append(
+                                                                                                $("<div>", { class: "pa15 df jcsb" }).append(
+                                                                                                    $("<div>", { class: "col-xs-3" }).append(
+                                                                                                        $("<div>", { class: "pb169 bgsc bgrn bgpc" }).ảnh(á, "ế", true)
+                                                                                                    ),
+                                                                                                    $("<div>", { class: "col-xs-9 bsbb pl15 pr" }).append(
+                                                                                                        $("<div>", { class: "fs11 lh12 fwb tal cpi crdh" }).cắtDòng(
+                                                                                                            2,
+                                                                                                            dữLiệu.tên(á, "ế")
+                                                                                                        ),
+                                                                                                        $("<div>", {
+                                                                                                            class: "pa r0 tar",
+                                                                                                            style: "bottom:-15px;",
+                                                                                                            html: iDate(v.ấ, "{j}/{n}/{f}"),
+                                                                                                            icon: "timer::vam,tty-1p",
+                                                                                                        })
+                                                                                                    )
+                                                                                                )
+                                                                                            ).on("click", function () {
+                                                                                                chờ(function () {
+                                                                                                    $(".bàiViếtTìmKiếm").slideUp();
+                                                                                                }, 234);
+                                                                                            });
+                                                                                    })
+                                                                                )
+                                                                            );
+                                                                        });
+                                                                    } else {
+                                                                        $(".bàiViếtTìmKiếm").remove();
+                                                                        $(".khốiTìmKiếm").append(
+                                                                            $("<div>", { class: "col-xs-12 pai r0 t1 bgcf z99 bàiViếtTìmKiếm bóng" }).append(
+                                                                                $("<div>", {
+                                                                                    class: "pa15 tac fwb cl1",
+                                                                                    text: "Không tìm thấy kết quả phù hợp!"
+                                                                                })
+                                                                            )
+                                                                        );
+                                                                    }
+                                                                }
+                                                            );
+                                                        }
+                                                    },
+                                                    1000
+                                                );
 
                                         }
                                         trangChủ();
@@ -804,6 +896,59 @@
                                                                                 }),
                                                                             )
 
+                                                                            // t.empty().append(
+                                                                            //     alert("okkkkkkk"),
+                                                                            //     $("<div>", { class: "col-sm-9 col-xs-12 " }).append(
+                                                                            //         $("<div>", { class: "ml10 mr50 ma0-xs" }).append(
+                                                                            //             (idbv || []).map(function (á) {
+                                                                            //                 return $("<div>", { class: "w1 cb mb25 bóng pa10" }).append(
+                                                                            //                     $("<div>", { class: "col-sm-4 col-xs-12 " }).append(
+                                                                            //                         $("<div>", { class: "w1 bgsc bgpc pb32" }).ảnh(á, "ế", true)
+                                                                            //                     ),
+                                                                            //                     $("<div>", { class: "col-sm-8 col-xs-12" }).append(
+                                                                            //                         $("<div>", { class: "pl35 pl0-xs" }).append(
+                                                                            //                             $("<div>", { class: "" }).append(
+                                                                            //                                 $("<a>", {
+                                                                            //                                     class: "fwb crdh tduh",
+                                                                            //                                     text: dữLiệu.tên(á, "ế"),
+                                                                            //                                     href: dữLiệu.url(á, "ế"),
+                                                                            //                                 })
+                                                                            //                             ),
+                                                                            //                             $("<div>", {
+                                                                            //                                 class: "mt10",
+                                                                            //                                 text: dữLiệu.môTả(á, "ế"),
+                                                                            //                             }),
+                                                                            //                             $("<div>", {
+                                                                            //                                 class: "mt25 df jcfe aic",
+                                                                            //                             }).append(
+                                                                            //                                 $.icon("schedule:: fs16 mr5"),
+                                                                            //                                 $("<div>", {
+                                                                            //                                     class: "",
+                                                                            //                                     text: iDate(config("bàiViết." + á + ".ấ"), "DD/MM/YYYY"),
+                                                                            //                                 })
+                                                                            //                             )
+                                                                            //                         )
+                                                                            //                     )
+                                                                            //                 );
+                                                                            //             })
+                                                                            //         )
+                                                                            //     ),
+                                                                            //     // $("<div>", { class: "col-sm-3 col-xs-0 " }).append(
+                                                                            //     //     $("<div>", { class: "pl40 mr10" }).append(
+                                                                            //     //         $("<div>", { class: "" }).append(
+                                                                            //     //             (config("chuyênLực." + ụĐồngCấp) || []).map(function (á) {
+                                                                            //     //                 return $("<div>", { class: "ptb15 bss bb2 bcc" }).append(
+                                                                            //     //                     $("<a>", {
+                                                                            //     //                         class: "fwb crdh cpi",
+                                                                            //     //                         text: dữLiệu.tên(á, "ụ"),
+                                                                            //     //                         href: dữLiệu.url(á, "ụ"),
+                                                                            //     //                     })
+                                                                            //     //                 );
+                                                                            //     //             })
+                                                                            //     //         )
+                                                                            //     //     )
+                                                                            //     // )
+                                                                            // );
                                                                         }
                                                                     })
                                                                 }
@@ -885,6 +1030,7 @@
                                                 //     );
 
                                                 // })
+                                                cuộn(0);
                                                 thân.empty().append(
                                                     $("<div>", { class: "container w1 mt50 " }).append(
                                                         $("<div>", { class: "mt25 mb40 plr15" }).append(
