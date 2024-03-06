@@ -40,7 +40,7 @@
                     js: ["package.hanu"],
                     css: ["package.all"],
                 },
-                biểuTượng: "/assets/logo-256.png",
+                biểuTượng: "TT07-hanu/assets/logo-256.png",
                 chờ: 1067, //tạo độ trễ khi vào xem nội dung (đảm bảo nội dung render đầy đủ)
                 koChe: false, //không hiển thị
                 màuNền: "darkred", //Màu nền chờ
@@ -82,7 +82,7 @@
                                             //menu phụ
                                             $("<div>", { class: "menuPhu bgcrd dn-xs" }).append(
                                                 $("<div>", { class: "container df aic pa10" }).append(
-                                                    $("<div>", { class: "col-md-6 df" }).each(function () {
+                                                    $("<div>", { class: "col-md-4 df" }).each(function () {
                                                         var t = $(this)
                                                         CẦN.db("chuyênLực." + 13540, function (item) {
                                                             t.empty().append(
@@ -90,13 +90,12 @@
                                                                     (config("chuyênLực.13540") || []).map(function (item, index) {
                                                                         return $("<a>", { class: "db cyh pr10 br1 bss bcf", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") })
                                                                     }),
-                                                                    $("<a>", { class: "db cyh pr10 br1 bss bcf", text: "Tác nghiệp điện tử" }),
-                                                                    $("<a>", { class: "db cyh pr10 br1 bss bcf", text: "Liên hệ" })
+                                                                    // $("<a>", { class: "db cyh pr10 br1 bss bcf", text: "Khoa Tiếng Anh" })
                                                                 )
                                                             )
                                                         })
                                                     }),
-                                                    $("<div>", { class: "col-md-6 df jcfe" }).append(
+                                                    $("<div>", { class: "col-md-7 df jcfe" }).append(
                                                         $("<div>", { class: "df" }).append(
                                                             $("<div>", { class: "search df bgcf aic bra10 mr15 oh khốiTìmKiếm" }).append(
                                                                 $("<div>", { class: "pl10", icon: "search::vam" }),
@@ -111,22 +110,22 @@
                                                                 $("<div>", { class: "fwb", text: "ĐĂNG NHẬP" }),
                                                             ),
                                                             $("<div>", { class: "mr10" }).append(
-                                                                $("<img>", { class: "", src: "/assets/vi.gif" })
+                                                                $("<img>", { class: "", src: "TT07-hanu/assets/vi.gif" })
                                                             ),
                                                             $("<div>", { class: "" }).append(
-                                                                $("<img>", { class: "", src: "/assets/en.gif" })
+                                                                $("<img>", { class: "", src: "TT07-hanu/assets/en.gif" })
                                                             ),
                                                         )
                                                     )
                                                 )
                                             ),
                                             //menu chính 
-                                            $("<div>", { class: "menuChinh bgcbd05 z9 pf w1 dn-xs" }).append(
+                                            $("<div>", { class: "menuChinh bgc05 z9 pf w1 dn-xs bóng" }).append(
                                                 $("<div>", { class: "container df aic" }).append(
                                                     $("<div>", { class: "col-md-4 df ptb10" }).append(
                                                         $("<div>", { class: "col-xs-2" }).append(
                                                             $("<a>", { class: "db wh1", href: "/" }).append(
-                                                                $("<div>", { class: "bgrn bgso bgpc h1", style: "background-image:url('assets/logo-256.png')" })
+                                                                $("<div>", { class: "bgrn bgso bgpc h1", style: "background-image:url('TT07-hanu/assets/logo-256.png')" })
                                                             )
 
                                                         ),
@@ -146,7 +145,7 @@
                                             $("<div>", { class: "menuMobile bgcrd dn db-xs w1" }).append(
                                                 $("<div>", { class: "df ptb10 plr15" }).append(
                                                     $("<div>", { class: "col-xs-6 df" }).append(
-                                                        $("<div>", { class: "bgpc bgrn bgso h1 col-xs-2", style: "background-image:url('assets/logo-256.png')" }),
+                                                        $("<div>", { class: "bgpc bgrn bgso h1 col-xs-2", style: "background-image:url('TT07-hanu/assets/logo-256.png')" }),
                                                         $("<div>", { class: " fs08 df fdc fwb cf pl10" }).append(
                                                             $("<div>", { class: "", text: "TRƯỜNG ĐẠI HỌC HÀ NỘI" }),
                                                             $("<div>", { class: "", text: "Hanoi University" }),
@@ -167,7 +166,7 @@
                                                 $("<div>", { class: "nd-menu bgcf w80 df fdc h1 ta5 fr pa10 dn" }).append(
                                                     $("<div>", { class: "df jcsb aic pb15" }).append(
                                                         $("<a>", { class: "db ", href: "/" }).append(
-                                                            $("<img>", { class: "wh40", src: "/assets/logo-256.png" })
+                                                            $("<img>", { class: "wh40", src: "TT07-hanu/assets/logo-256.png" })
                                                         ),
                                                         $("<i>", { class: "cancel", icon: "cancel::vam fs2" })
                                                     ),
@@ -175,7 +174,7 @@
                                                         menuChinh.map(function (item) {
                                                             return $("<div>", { class: "w1 bb1 bss bsda bca" }).append(
                                                                 $("<div>", { class: "df jcsb pa10 " }).append(
-                                                                    $("<a>", { class: "db fs09-xs fwb cpi", text: dữLiệu.tên(item, "ụ"),href: dữLiệu.url(item, "ụ") }),
+                                                                    $("<a>", { class: "db fs09-xs fwb cpi", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") }),
                                                                     $("<div>", { class: "slide-btn" }).append(
                                                                         $("<div>", { class: "fs15 expand_more", icon: "expand_more::vam fs15" }),
                                                                         $("<div>", { class: "dn fs15 expand_less", icon: "expand_less::vam fs15" })
@@ -209,25 +208,50 @@
                                         thân = $("<div>", { class: "wh1 thân" }).append(
                                             // slide banner
                                             $("<div>", { class: "banner" }).append(
-                                                $("<div>", { class: "banner pr t0" }).append(
-                                                    $("<div>", { class: "bgrn bgsc bgpc pb249 ", style: "background-image:url('assets/slide_1.jpg')" }).append(
-                                                        $("<div>", { class: "w1 bgc07 pa b0 l0" }).append(
-                                                            $("<div>", { class: " container df jcsb cf dn-xs" }).each(function () {
-                                                                var t = $(this);
-                                                                CẦN.db("chuyênLực." + 13546, function (item) {
-                                                                    t.empty().append(
-                                                                        (config("chuyênLực.13546") || []).map(function (i) {
-                                                                            return $("<div>", { class: "col-md-2 df jcsc aic tac fwb fs11 bgcr4h cyh ptb25" }).append(
-                                                                                $("<a>", { class: "db", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
-                                                                            )
-                                                                        })
-                                                                    )
+                                                // $("<div>", { class: "banner pr t0" }).append(
+                                                //     $("<div>", { class: "bgrn bgsc bgpc pb249 ", style: "background-image:url('TT07-hanu/assets/slide_1.jpg')" }).append(
+                                                //         $("<div>", { class: "w1 bgc07 pa b0 l0" }).append(
+                                                //             $("<div>", { class: " container df jcsb cf dn-xs" }).each(function () {
+                                                //                 var t = $(this);
+                                                //                 CẦN.db("chuyênLực." + 13546, function (item) {
+                                                //                     t.empty().append(
+                                                //                         (config("chuyênLực.13546") || []).map(function (i) {
+                                                //                             return $("<div>", { class: "col-md-2 df jcsc aic tac fwb fs11 bgcr4h cyh ptb25" }).append(
+                                                //                                 $("<a>", { class: "db", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
+                                                //                             )
+                                                //                         })
+                                                //                     )
+                                                //                 })
+                                                //             }
+                                                //             )
+                                                //         )
+                                                //     ),
+                                                // ),
+                                                
+
+                                                $("<div>", {
+                                                    class: "wh1 slideBanner pb249"
+                                                }).xửLý("đốiTượng.tải.a2662fb06842e1acd65bccbe40b85dfa", { d: { "thuộcTính": {559906:"13538", 558583:1}, "sắpXếp": "khởiTạo-", giớiHạn: 3 } }, { cache: true }, function (a) { // Sau khi lấy được các slide cần hiển thị bạn sẽ hiển thị slide bằng cách sử dụng function $.fn.sờLai
+                                                    
+                                                    if (!empty(a))
+                                                        CẦN.db("a2662fb06842e1acd65bccbe40b85dfa." + a, function () {
+                                                            $(".slideBanner").sờLai(
+                                                                a.map(function (á, à) { // ID ảnh slide chứa trong giá trị của thuộc tính 558579
+                                                                    var ả = có("ậ.0", Jd(config(md5Slide + "." + á + ".558579")));
+                                                                    if (ả)
+                                                                        return ả;
+                                                                }).lọc(), function (i, v) {  },
+                                                                {
+                                                                    động: "slideInRight",
+                                                                    tựChạy: 1000,
+                                                                    phụ: "dn",
+                                                                    sẵn: true,
+                                                                    cuộn: false,
+                                                                    nét: true,
+                                                                    kín: true,
                                                                 })
-                                                            }
-                                                            )
-                                                        )
-                                                    ),
-                                                ),
+                                                        })
+                                                }),
                                             ),
                                             // main
                                             $("<div>", { class: "main" }).append(
@@ -432,7 +456,7 @@
                                                 ),
                                                 // tại sao chọn hanu
                                                 $("<div>", { class: "container bóng pa10 mt25" }).append(
-                                                    $("<div>", { class: "bgsc bgrn bgpc pb31 ", style: "background-image:url('assets/chon_hanu.jpg')" }).append(
+                                                    $("<div>", { class: "bgsc bgrn bgpc pb31 ", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }).append(
 
                                                     ),
                                                 ),
@@ -698,7 +722,7 @@
                                                 $("<div>", { class: "df fww" }).append(
                                                     $("<div>", { class: "col-md-6 col-xs-12 df fww aic" }).append(
                                                         $("<div>", { class: "col-md-3 col-xs-3 pr15 h1" }).append(
-                                                            $("<div>", { class: "bgso bgrn bgpc h1", style: "background-image:url('assets/logo-256.png')" })
+                                                            $("<div>", { class: "bgso bgrn bgpc h1", style: "background-image:url('TT07-hanu/assets/logo-256.png')" })
                                                         ),
                                                         $("<div>", { class: "col-md-9 col-xs-9 df fs09-xs fdc cf fwb lh15" }).append(
                                                             $("<div>", { class: "", text: "Trường Đại học Hà Nội - Hanoi University" }),
@@ -1214,6 +1238,7 @@
                                         // })
                                     },
                                     // Các đường link không được cấu hình
+                                
                                     404: function () {
                                         vàoURL("/");
                                     },
@@ -1270,14 +1295,13 @@
                         var scrollTop = document.documentElement.scrollTop;
                         var menuChinh = $(".menuChinh");
                         var menuPhu = $(".menuPhu");
-                        if (scrollTop > 20) {
-
+                        if (scrollTop > 0) {
                             menuChinh.removeClass("bgcbd05")
-                            menuChinh.addClass("t0 bgcbd08")
+                            menuChinh.addClass("t0 bgcrd")
                             menuPhu.hide()
-                        } else {
+                        } else if (scrollTop == 0) {
                             menuPhu.show()
-                            menuChinh.removeClass("t0 bgcbd08");
+                            menuChinh.removeClass("t0 bgcrd");
                             menuChinh.addClass("bgcbd05");
                         }
 
@@ -1288,7 +1312,7 @@
                             $(".menuMobile").addClass("pf z9")
                         } else {
                             $(".menuMobile").removeClass("pf z9")
-                            $(".menuPhu").hide()
+                            $(".menuPhu").hide(1000)
                         }
 
                     }
