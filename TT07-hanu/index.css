@@ -15,8 +15,8 @@
 .bgcbd05 {
   background-color: rgba(0, 19, 70, 0.5);
 }
-.bgcbd1 {
-  background-color: rgba(0, 19, 70, 1);
+.bgcbd08 {
+  background-color: rgba(0, 19, 70, 0.8);
 }
 .h50pt {
   height: 50%;
@@ -37,4 +37,7 @@
   100% {
     transform: translateX(0);
   }
+}
+.menu_items:hover .menu_drop {
+  display: block;
 }
