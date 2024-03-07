@@ -567,24 +567,24 @@
                                                             $("<div>", { class: "df bóng w1" }).append(
                                                                 $("<div>", { class: "w50 btnVideo" }).append(
                                                                     $("<div>", { class: "tac fwb fs12 fs1-xs w1 ptb15 ttu  cpi ", text: "video" })
-                                                                ).on("click", function(){
+                                                                ).on("click", function () {
                                                                     $(this).addClass("bgcrd cf")
                                                                     $(".nd-video").show(),
-                                                                    $(".nd-anh").hide(),
-                                                                    $(".btnAnh").removeClass("bgcrd cf")
+                                                                        $(".nd-anh").hide(),
+                                                                        $(".btnAnh").removeClass("bgcrd cf")
                                                                 }),
                                                                 $("<div>", { class: "w50 btnAnh" }).append(
                                                                     $("<div>", { class: "tac fwb fs12 fs1-xs w1 ptb15 ttu cpi", text: "thư viện ảnh" })
-                                                                ).on("click", function(){
+                                                                ).on("click", function () {
                                                                     $(this).addClass("bgcrd cf")
                                                                     $(".nd-anh").show(),
-                                                                    $(".nd-video").hide(),
-                                                                    $(".btnVideo").removeClass("bgcrd cf")
+                                                                        $(".nd-video").hide(),
+                                                                        $(".btnVideo").removeClass("bgcrd cf")
                                                                 }),
-                                                                chờ(function(){
+                                                                chờ(function () {
                                                                     $(".btnVideo").trigger("click")
-                                                                },500)
-                                                                
+                                                                }, 500)
+
                                                             ),
                                                             $("<div>", { class: "df pa15 fww" }).append(
                                                                 // nội dung video
@@ -597,31 +597,21 @@
                                                                     )
                                                                 ),
                                                                 // nội dung thư viện ảnh
-                                                                $("<div>", { class: "nd-anh df fwb w1 dn" }).append(
-                                                                    $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
-                                                                        $("<div>", { class: "df fdc h1 bóng" }).append(
-                                                                            $("<div>", { class: "pb32 bgsc bgrn bgpc ", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }),
-                                                                            $("<div>", { class: "w1 tac ptb15 fwb", text: "ảnh hoạt động chung" })
-                                                                        )
-                                                                    ),
-                                                                    $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
-                                                                        $("<div>", { class: "df fdc h1 bóng" }).append(
-                                                                            $("<div>", { class: "pb32 bgsc bgrn bgpc", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }),
-                                                                            $("<div>", { class: "w1 tac ptb15 fwb", text: "ảnh hoạt động chung" })
-                                                                        )
-                                                                    ),
-                                                                    $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
-                                                                        $("<div>", { class: "df fdc h1 bóng" }).append(
-                                                                            $("<div>", { class: "pb32 bgsc bgrn bgpc", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }),
-                                                                            $("<div>", { class: "w1 tac ptb15 fwb", text: "ảnh hoạt động chung" })
-                                                                        )
-                                                                    ),
-                                                                    $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
-                                                                        $("<div>", { class: "df fdc h1 bóng" }).append(
-                                                                            $("<div>", { class: "pb32 bgsc bgrn bgpc", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }),
-                                                                            $("<div>", { class: "w1 tac ptb15 fwb", text: "ảnh hoạt động chung" })
-                                                                        )
-                                                                    ),
+                                                                $("<div>", { class: "nd-anh df fwb w1 dn" }).each(function () {
+                                                                    var t = $(this);
+                                                                    t.empty().append(
+                                                                        (config("chuyênLực.13596" || [])).map(function (a) {
+                                                                            return $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
+                                                                                $("<div>", { class: "df fdc h1 bóng" }).append(
+                                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc ", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }).ảnh(a, "ụ", true),
+                                                                                    $("<a>", { class: "w1 tac ptb15 fwb db cpi", text: dữLiệu.tên(a, "ụ"), href: dữLiệu.url(a, "ụ") })
+                                                                                )
+                                                                            )
+                                                                        })
+                                                                    )
+                                                                }
+
+
                                                                 ),
                                                                 xửLý(
                                                                     "đốiTượng.tải.bàiViết",
@@ -936,6 +926,8 @@
                                             },
                                             1000
                                         );
+                                        // main.js
+
                                         // // ẩn hiện btt
                                         var lastScrollTop = 0;
                                         window.addEventListener("scroll", handleScroll);
@@ -952,10 +944,76 @@
                                             lastScrollTop = scrollTop;
                                         }
 
+                                        // scroll navbar
+                                        function enableScrollOnPC() {
+                                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                                            if (screenWidth >= 768) {
+                                                window.addEventListener("scroll", handleScroll);
+                                            } else {
+                                                window.addEventListener("scroll", scrolMb);
+                                            }
+                                        }
+                                        function handleScroll() {
+                                            var scrollTop = document.documentElement.scrollTop;
+                                            var menuChinh = $(".menuChinh");
+                                            var menuPhu = $(".menuPhu");
+                                            if (scrollTop > 0) {
+                                                menuChinh.removeClass("bgcbd05")
+                                                menuChinh.addClass("t0 bgcbd08")
+                                                menuPhu.hide()
+                                            } else if (scrollTop == 0) {
+                                                menuPhu.show()
+                                                menuChinh.removeClass("t0 bgcbd08");
+                                                menuChinh.addClass("bgcbd05");
+                                            }
+
+                                        };
+                                        function scrolMb() {
+                                            var scrollTop = document.documentElement.scrollTop;
+                                            if (scrollTop > 5) {
+                                                $(".menuMobile").addClass("pf z9")
+                                            } else {
+                                                $(".menuMobile").removeClass("pf z9")
+                                                $(".menuPhu").hide()
+                                            }
+
+                                        }
+                                        enableScrollOnPC();
+
+                                        // menu mobile
+                                        $(".icon-menu").click(function () {
+                                            $(".bg-menu").show();
+                                            $(".nd-menu").show();
+                                        });
+                                        $(".cancel").click(function () {
+                                            $(".bg-menu").hide()
+                                            $(".nd-menu").hide();
+                                        })
+
+                                        // slideToggle menu mobile
+                                        var slideBtn = $(".slide-btn");
+                                        slideBtn.each(function (index) {
+                                            $(this).on("click", function () {
+                                                var currentMenu = $(".menu-cmc").eq(index); // eq() trả về một phần tử có số chỉ mục cụ thể của các phần tử được chọn
+                                                var currentExpandLess = $(".expand_less").eq(index);
+                                                var currentExpandMore = $(".expand_more").eq(index);
+
+                                                currentMenu.slideToggle(function () {
+                                                    if (currentExpandLess.css("display") === "none") {
+                                                        currentExpandLess.removeClass("dn");
+                                                        currentExpandMore.addClass("dn");
+                                                    } else {
+                                                        currentExpandMore.removeClass("dn");
+                                                        currentExpandLess.addClass("dn");
+                                                    }
+                                                });
+                                            });
+                                        });
+
                                     }
                                     trangChủ();
-
-
+                                    
                                     // điều hướng
                                     $.each({
                                         // URL xử lý dữ liệu
@@ -1353,79 +1411,10 @@
                                     });
                                     // Vào ngay đường dẫn hiện tại
                                     vàoURL();
-
-                                    // menu mobile
-                                    $(".icon-menu").click(function () {
-                                        $(".bg-menu").show();
-                                        $(".nd-menu").show();
-                                    });
-                                    $(".cancel").click(function () {
-                                        $(".bg-menu").hide()
-                                        $(".nd-menu").hide();
-                                    })
-                                    // slideToggle menu mobile
-                                    var slideBtn = $(".slide-btn");
-                                    slideBtn.each(function (index) {
-                                        $(this).on("click", function () {
-                                            var currentMenu = $(".menu-cmc").eq(index); // eq() trả về một phần tử có số chỉ mục cụ thể của các phần tử được chọn
-                                            var currentExpandLess = $(".expand_less").eq(index);
-                                            var currentExpandMore = $(".expand_more").eq(index);
-
-                                            currentMenu.slideToggle(function () {
-                                                if (currentExpandLess.css("display") === "none") {
-                                                    currentExpandLess.removeClass("dn");
-                                                    currentExpandMore.addClass("dn");
-                                                } else {
-                                                    currentExpandMore.removeClass("dn");
-                                                    currentExpandLess.addClass("dn");
-                                                }
-                                            });
-                                        });
-                                    });
                                 });
                             })
                         }
                     )
-                    // main.js
-
-                    // scroll navbar
-                    function enableScrollOnPC() {
-                        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-                        if (screenWidth >= 768) {
-                            window.addEventListener("scroll", handleScroll);
-                        } else {
-                            window.addEventListener("scroll", scrolMb);
-                        }
-                    }
-                    function handleScroll() {
-                        var scrollTop = document.documentElement.scrollTop;
-                        var menuChinh = $(".menuChinh");
-                        var menuPhu = $(".menuPhu");
-                        if (scrollTop > 0) {
-                            menuChinh.removeClass("bgcbd05")
-                            menuChinh.addClass("t0 bgcbd08")
-                            menuPhu.hide()
-                        } else if (scrollTop == 0) {
-                            menuPhu.show()
-                            menuChinh.removeClass("t0 bgcbd08");
-                            menuChinh.addClass("bgcbd05");
-                        }
-
-                    };
-                    function scrolMb() {
-                        var scrollTop = document.documentElement.scrollTop;
-                        if (scrollTop > 15) {
-                            $(".menuMobile").addClass("pf z9")
-                        } else {
-                            $(".menuMobile").removeClass("pf z9")
-                            $(".menuPhu").hide(1000)
-                        }
-
-                    }
-                    enableScrollOnPC();
-
-
                 },
 
             });
