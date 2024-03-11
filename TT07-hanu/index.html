@@ -83,20 +83,20 @@
                                                 //menu phụ
                                                 $("<div>", { class: "menuPhu bgcrd dn-xs" }).append(
                                                     $("<div>", { class: "container df aic pa10" }).append(
-                                                        $("<div>", { class: "col-md-4 df" }).each(function () {
+                                                        $("<div>", { class: "col-md-6 df" }).each(function () {
                                                             var t = $(this)
                                                             CẦN.db("chuyênLực." + 13540, function (item) {
                                                                 t.empty().append(
-                                                                    $("<div>", { class: "df cf w1 jcsb" }).append(
+                                                                    $("<div>", { class: "df cf w1" }).append(
                                                                         (config("chuyênLực.13540") || []).map(function (item, index) {
-                                                                            return $("<a>", { class: "db cyh pr10 br1 bss bcf", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") })
+                                                                            return $("<a>", { class: "db cyh plr10 br1 bss bcf", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") })
                                                                         }),
-                                                                        // $("<a>", { class: "db cyh pr10 br1 bss bcf", text: "Khoa Tiếng Anh" })
+                                                                        $("<a>", { class: "db cyh plr10 br1 bss bcf", text: dữLiệu.tên(13950, "ụ"), href: dữLiệu.url(13950, "ụ") })
                                                                     )
                                                                 )
                                                             })
                                                         }),
-                                                        $("<div>", { class: "col-md-7 df jcfe" }).append(
+                                                        $("<div>", { class: "col-md-6 df jcfe" }).append(
                                                             $("<div>", { class: "df" }).append(
                                                                 $("<div>", { class: "search df bgcf aic bra10 mr15 oh khốiTìmKiếm" }).append(
                                                                     $("<div>", { class: "pl10", icon: "search::vam" }),
@@ -126,7 +126,7 @@
                                                         $("<div>", { class: "col-md-4 df ptb10" }).append(
                                                             $("<div>", { class: "col-xs-2" }).append(
                                                                 $("<a>", { class: "db wh1", href: "/" }).append(
-                                                                    $("<div>", { class: "bgrn bgso bgpc h1", style: "background-image:url('TT07-hanu/assets/logo-256.png')" })
+                                                                    $("<div>", { class: "bgrn bgso bgpc h1", style: "background-image:url('https://trunv.thuctap.inevn.com/TT07-hanu/assets/logo-256.png')" })
                                                                 )
 
                                                             ),
@@ -146,7 +146,7 @@
                                                                         $("<div>", { class: "bgcf bóng pa l0 t1 z11 menu_drop dn" }).append(
                                                                             $("<div>", { class: "bb1 bss bcod crd" }).append(
                                                                                 (menuCon || []).map(function (el, index) {
-                                                                                    return $("<a>", { class: "db wmn3 pa15 crd cpi tduh ttu ", text: dữLiệu.tên(el, "ụ"), href: dữLiệu.url(el, "ụ") }).on("click", function () {
+                                                                                    return $("<a>", { class: "db wmn3 pa15 crd cpi bgcr4h cfh ", text: dữLiệu.tên(el, "ụ"), href: dữLiệu.url(el, "ụ") }).on("click", function () {
                                                                                         $(".menu_drop").sửaLớp("dn")
                                                                                     })
                                                                                 })
@@ -164,7 +164,7 @@
                                                 $("<div>", { class: "menuMobile bgcrd dn db-xs w1 t0" }).append(
                                                     $("<div>", { class: "df ptb10 plr15" }).append(
                                                         $("<div>", { class: "col-xs-6 df" }).append(
-                                                            $("<div>", { class: "bgpc bgrn bgso h1 col-xs-2", style: "background-image:url('TT07-hanu/assets/logo-256.png')" }),
+                                                            $("<div>", { class: "bgpc bgrn bgso h1 col-xs-2", style: "background-image:url('https://trunv.thuctap.inevn.com/TT07-hanu/assets/logo-256.png')" }),
                                                             $("<div>", { class: " fs08 df fdc fwb cf pl10" }).append(
                                                                 $("<div>", { class: "", text: "TRƯỜNG ĐẠI HỌC HÀ NỘI" }),
                                                                 $("<div>", { class: "", text: "Hanoi University" }),
@@ -275,7 +275,7 @@
                                                             CẦN.db("chuyênLực." + 13546, function (item) {
                                                                 t.empty().append(
                                                                     (config("chuyênLực.13546") || []).map(function (i) {
-                                                                        return $("<div>", { class: "col-md-2 df jcsc aic tac fwb fs11 bgcr4h cyh ptb25" }).append(
+                                                                        return $("<a>", { class: "col-md-2 df jcsc aic tac fwb fs11 bgcr4h cyh ptb25 plr10 db", href: dữLiệu.url(i, "ụ") }).append(
                                                                             $("<a>", { class: "db", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
                                                                         )
                                                                     })
@@ -308,7 +308,7 @@
                                                                             t.empty().sờLais(
                                                                                 a.map(function (item, index) {
                                                                                     return $("<div>", { class: "w50 w1-xs df fdc plr10 " }).append(
-                                                                                        $("<div>", { class: "bgsc bgrn bgpc pb21" }).ảnh(item, "ế", true),
+                                                                                        $("<a>", { class: "bgsc bgrn bgpc pb21 db shineh", href: dữLiệu.url(item, "ế") }).ảnh(item, "ế", true),
                                                                                         $("<div>", { class: "df f1 pt10 fdc jcsb" }).append(
                                                                                             $("<a>", { class: "fwb db tduh fs09-xs", text: dữLiệu.tên(item, "ế"), href: dữLiệu.url(item, "ế") }),
                                                                                             $("<div>", { class: "df aic jcfe pa10" }).append(
@@ -362,7 +362,7 @@
                                                                             t.empty().sờLais(
                                                                                 (a || []).map(function (item, index) {
                                                                                     return $("<div>", { class: "col-xs-12 df fdc plr10 " }).append(
-                                                                                        $("<div>", { class: "bgsc bgrn bgpc pb21" }).ảnh(item, "ế", true),
+                                                                                        $("<a>", { class: "bgsc bgrn bgpc pb21 db shineh", href: dữLiệu.url(item, "ế") }).ảnh(item, "ế", true),
                                                                                         $("<div>", { class: "df f1 pt10 fdc jcsb" }).append(
                                                                                             $("<a>", { class: "fwb db tduh fs09-xs", text: dữLiệu.tên(item, "ế"), href: dữLiệu.url(item, "ế") }),
                                                                                             $("<div>", { class: "df aic jcfe pa10" }).append(
@@ -435,9 +435,9 @@
                                                         ),
                                                         // chuyên mục khác
                                                         $("<div>", { class: "col-md-3 col-xs-12 df pa10" }).append(
-                                                            $("<div>", { class: "bóng df fdc jcsb bóng wh1" }).append(
+                                                            $("<div>", { class: "df fdc jcsb wh1" }).append(
                                                                 uTinTuc.map(function (item, index) {
-                                                                    return $("<div>", { class: "bgsc bgrn bgpc pb249 pr mt15-xs" }).ảnh(item, "ụ", true).append(
+                                                                    return $("<div>", { class: "bgsc bgrn bgpc pb249 pr mt15-xs shineh bóng" }).ảnh(item, "ụ", true).append(
                                                                         $("<div>", { class: "wh1 df aic jcsc pa bgc03 cf" }).append(
                                                                             $("<a>", { class: "fs15 fwb tac plr25 cyh", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") })
                                                                         )
@@ -488,7 +488,7 @@
                                                     ),
                                                     // tại sao chọn hanu
                                                     $("<div>", { class: "container bóng pa10 mt25" }).append(
-                                                        $("<div>", { class: "bgsc bgrn bgpc pb31 ", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }).append(
+                                                        $("<div>", { class: "bgsc bgrn bgpc pb31 ", style: "background-image:url('https://trunv.thuctap.inevn.com/TT07-hanu/assets/chon_hanu.jpg')" }).append(
 
                                                         ),
                                                     ),
@@ -504,7 +504,7 @@
                                                                     (config("chuyênLực.13577") || []).map(function (item, index) {
                                                                         return $("<div>", { class: "col-md-3 col-xs-12 pa10-xs df plr5" }).append(
                                                                             $("<div>", { class: "df fdc bóng" }).append(
-                                                                                $("<div>", { class: "bgsc bgrn bgpc pb43" }).ảnh(item, "ụ", true),
+                                                                                $("<a>", { class: "bgsc bgrn bgpc pb43 db shineh", href: dữLiệu.url(item, "ụ") }).ảnh(item, "ụ", true),
                                                                                 $("<div>", { class: "df fdc h1 jcsb plr15" }).append(
                                                                                     $("<div>", { class: "" }).append(
                                                                                         $("<a>", { class: "ptb15 tac w1 fwb db crdh", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") }),
@@ -528,8 +528,8 @@
                                                     $("<div>", { class: "container mt50 df fww" }).append(
                                                         (svHanu || []).map(function (i) {
                                                             return $("<div>", { class: "col-md-6 col-xs-12 pa10-xs plr5" }).append(
-                                                                $("<div>", { class: "bgsc bgrn bgpc pb21 pr" }).ảnh(i, "ụ", true).append(
-                                                                    $("<div>", { class: "wh1 df aic jcsc pa bgc03 cf" }).append(
+                                                                $("<a>", { class: "bgsc bgrn bgpc pb21 pr db ", href: dữLiệu.url(i, "ụ") }).ảnh(i, "ụ", true).append(
+                                                                    $("<div>", { class: "wh1 df aic jcsc pa bgc03 cf shineh cyh" }).append(
                                                                         $("<a>", { class: "fs15 fwb tac plr25 cyh", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
                                                                     )
                                                                 )
@@ -548,7 +548,7 @@
                                                                     (config("chuyênLực.13588") || []).map(function (item, index) {
                                                                         return $("<div>", { class: "col-md-3 col-xs-12 df pa10-xs plr5" }).append(
                                                                             $("<div>", { class: "df fdc bóng wh1" }).append(
-                                                                                $("<div>", { class: "bgsc bgrn bgpc pb43" }).ảnh(item, "ụ", true),
+                                                                                $("<a>", { class: "bgsc bgrn bgpc pb43 db shineh", href: dữLiệu.url(item, "ụ") }).ảnh(item, "ụ", true),
                                                                                 $("<a>", { class: "ptb15 tac w1 fwb db crdh", text: dữLiệu.tên(item, "ụ"), href: dữLiệu.url(item, "ụ") }),
                                                                             )
 
@@ -603,7 +603,7 @@
                                                                         (config("chuyênLực.13596" || [])).map(function (a) {
                                                                             return $("<div>", { class: "col-md-4 col-xs-12  pa15" }).append(
                                                                                 $("<div>", { class: "df fdc h1 bóng" }).append(
-                                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc ", style: "background-image:url('TT07-hanu/assets/chon_hanu.jpg')" }).ảnh(a, "ụ", true),
+                                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc " }).ảnh(a, "ụ", true),
                                                                                     $("<a>", { class: "w1 tac ptb15 fwb db cpi", text: dữLiệu.tên(a, "ụ"), href: dữLiệu.url(a, "ụ") })
                                                                                 )
                                                                             )
@@ -702,36 +702,6 @@
                                                         )
 
                                                     ),
-                                                    // $("<div>", { class: "mt50 bgcrd ptb15 pr dn-xs" }).append(
-                                                    //     $("<div>", { class: "pa wh1 df aic t0" }).append(
-                                                    //         $("<div>", { class: "df jcsb plr50 w1" }).append(
-                                                    //             $("<div>", { class: "bra50 mr10 bóng bgcf", icon: "keyboard_arrow_left::vam fs15 b1s bra50" }),
-                                                    //             $("<div>", { class: "bra50 bóng bgcf", icon: "keyboard_arrow_right::vam fs15 b1s bra50" }),
-                                                    //         )
-                                                    //     ),
-                                                    //     $("<div>", { class: "container df jcsb" }).xửLý(
-                                                    //         "đốiTượng.tải.bàiViết",
-                                                    //         {
-                                                    //             d: {
-                                                    //                 thuộcTính: {
-                                                    //                     ụ: ["13597", "~|"],
-                                                    //                     p: "1"
-                                                    //                 },
-                                                    //                 giớiHạn: 5,
-                                                    //                 sắpXếp: "ấ"
-                                                    //             }
-                                                    //         }, { cache: true, bảng: "bàiViết", delay: 1000 },
-                                                    //         function (a) {
-                                                    //             $(this).empty().append(
-                                                    //                 (a || []).map(function (i, index) {
-                                                    //                     return $("<div>", { class: "col-md-2" }).append(
-                                                    //                         $("<div>", { class: "bgsc bgrn bgpc pb249 " }).ảnh(i, "ế", true)
-                                                    //                     )
-                                                    //                 })
-                                                    //             )
-                                                    //         }
-                                                    //     )
-                                                    // ),
 
                                                     // hợp tác
                                                     $("<div>", { class: "ptb15 mtb40 btbw2 bss bcrd" }).append(
@@ -800,7 +770,7 @@
                                                     $("<div>", { class: "df fww" }).append(
                                                         $("<div>", { class: "col-md-6 col-xs-12 df fww aic" }).append(
                                                             $("<div>", { class: "col-md-3 col-xs-3 pr15 h1" }).append(
-                                                                $("<div>", { class: "bgso bgrn bgpc h1", style: "background-image:url('TT07-hanu/assets/logo-256.png')" })
+                                                                $("<div>", { class: "bgso bgrn bgpc h1", style: "background-image:url('https://trunv.thuctap.inevn.com/TT07-hanu/assets/logo-256.png')" })
                                                             ),
                                                             $("<div>", { class: "col-md-9 col-xs-9 df fs09-xs fdc cf fwb lh15" }).append(
                                                                 $("<div>", { class: "", text: "Trường Đại học Hà Nội - Hanoi University" }),
@@ -809,18 +779,13 @@
                                                                 $("<div>", { class: "", text: "Email:hanu@hanu.edu.vn | tuyensinh@hanu.edu.vn" }),
                                                             ),
                                                         ),
-                                                        $("<div>", { class: "col-md-6 col-xs-12 fs09-xs df jcfe cf fwb mt15-xs" }).append(
-                                                            $("<div>", { class: "col-md-8 col-xs-12 df fww jcsb lh16 " }).append(
-                                                                $("<div>", { class: "col-md-6 df fdc lh16 " }).append(
-                                                                    $("<div>", { class: "", text: "Du học" }),
-                                                                    $("<div>", { class: "", text: "Thông tin học phí" }),
-                                                                    $("<div>", { class: "", text: "Ký túc xá" }),
-                                                                ),
-                                                                $("<div>", { class: "col-md-6 df fdc lh16 fs09-xs" }).append(
-                                                                    $("<div>", { class: "", text: "Thư viện điện tử" }),
-                                                                    $("<div>", { class: "", text: "Văn bản - Biểu mẫu" }),
-                                                                    $("<div>", { class: "", text: "Thư viện ảnh - Video" }),
-                                                                ),
+                                                        $("<div>", { class: "col-md-6 col-xs-12 fs09-xs df jcfe cf fwb pt25-xs " }).append(
+                                                            $("<div>", { class: "col-md-8 col-xs-12 df fww lh16 " }).append(
+                                                                (config("chuyênLực.13943") || []).map(function (a) {
+                                                                    return $("<div>", { class: "col-xs-6" }).append(
+                                                                        $("<a>", { class: "fwb cf cyh", text: dữLiệu.tên(a, "ụ"), href: dữLiệu.url(a, "ụ") }),
+                                                                    )
+                                                                })
                                                             ),
 
                                                         ),
@@ -831,7 +796,32 @@
 
                                                 )
                                             ),
-                                        );
+                                            //support
+                                            $("<div>", { class: "  pf b0 r0  pr35" }).append(
+                                                $("<div>", { class: "bgcrd brt15 " }).append(
+                                                    tánGẫu.khởiTạo(true, {
+                                                        tàiKhoản: [
+                                                            {
+                                                                ê: "Nguyễn Văn Tru",
+                                                                à: "158108",
+                                                                ô: "zz",
+                                                                i: "app::cod",
+                                                                class: ""
+                                                            },
+                                                        ],
+                                                        chào: "xin chào",
+                                                        f: function () {
+                                                            cl("aaaaaaaaaaaa", $(this), 9999)
+                                                        }
+                                                        // sửaLớp: {
+                                                        //     tánGẫu: "-bg1o bgcrd ",
+                                                        // }
+
+                                                    },
+                                                    )
+                                                )
+                                            ),
+                                        ); //end trang chu
 
                                         // chức năng tìm kiếm
                                         $(document).chờKhóa(  //Chạy hàm callback sau khi sự kiện được kích hoạt với thời gian 1s như bên dưới
@@ -1013,7 +1003,7 @@
 
                                     }
                                     trangChủ();
-                                    
+
                                     // điều hướng
                                     $.each({
                                         // URL xử lý dữ liệu
@@ -1063,11 +1053,185 @@
                                                                 var t = $(this); // class : content
                                                                 CẦN.db("chuyênLực." + i, function (mcmc) { // lấy ra mảng id thư mục con
                                                                     cl(mcmc, "mảng chuyên mục con của thư mục đang chọn")
+                                                                    // trang con liên hệ
+                                                                    if (i == 13950) {
+                                                                        // t.empty().append(
+                                                                        //     $("<div>", { class: "LiênHệ bra15 bóng df jcsc pa25 oh" }).append(
+                                                                        //         $("<div>", { class: "col-md-7" }).append(
+                                                                        //             $("<div>", { class: "tac w1 fwb fs15 pb35", text: "THÔNG TIN LIÊN HỆ" }),
+                                                                        //             $("<div>", { class: "df" }).append(
+                                                                        //                 $("<div>", { class: "col-md-6" }).append(
+                                                                        //                     $("<div>", { class: "plr25" }).append(
+                                                                        //                         $("<input>", { class: "bra25 w1 pa10",placeholder:"Họ và tên" }),
+                                                                        //                     ),
+
+                                                                        //                 ),
+                                                                        //                 $("<div>", { class: "col-md-6" }).append(
+                                                                        //                     $("<div>", { class: "plr25" }).append(
+                                                                        //                         $("<input>", { class: "bra25 w1 pa10", placeholder:"Email"}),
+                                                                        //                     ),
+                                                                        //                 ),
+                                                                        //             ),
+                                                                        //             $("<div>", { class: "df" }).append(
+                                                                        //                 $("<div>", { class: "col-xs-12" }).append(
+                                                                        //                     $("<div>", { class: "pa25" }).append(
+                                                                        //                         $("<input>", { class: "bra25 wh1 pa10",placeholder:"Tiêu đề" }),
+                                                                        //                     ),
+
+                                                                        //                 ),
+                                                                        //             ),
+                                                                        //             $("<div>", { class: "df" }).append(
+                                                                        //                 $("<div>", { class: "col-xs-12" }).append(
+                                                                        //                     $("<div>", { class: "h150 plr25" }).append(
+                                                                        //                         $("<textarea>", { class: "bra25 wh1 pa10",placeholder:"Nội dung lời nhắn" }),
+                                                                        //                     ),
+
+                                                                        //                 ),
+                                                                        //             ),
+                                                                        //             $("<div>", { class: "w1 tar pa25" }).append(
+                                                                        //                 $("<button>", { class: "plr25 ptb10 bra15 bn bgcrd cf shineh cpi bóng", text:"Gửi" })
+                                                                        //             )
+                                                                        //         )
+                                                                        //     )
+                                                                        // )
+                                                                        var d = [
+                                                                            {
+                                                                                i: "ê",
+                                                                                e: "Họ tên",
+                                                                                bo: "col-md-6",
+                                                                            },
+                                                                            {
+                                                                                i: "e",
+                                                                                e: "Email",
+                                                                                bo: "col-md-6",
+                                                                            },
+                                                                            {
+                                                                                i: "ộ",
+                                                                                e: "Nội dung",
+                                                                                bo: "col-md-12",
+                                                                                lớp: "đa,hmn1",
+                                                                            },
+                                                                        ],
+                                                                            ụ = [13950], // Mảng ID các chuyên mục chứa bài viết liên hệ
+                                                                            à = ụ
+                                                                                .map(function (é) {
+                                                                                    // Mảng ID các tài khoản liên quan
+                                                                                    return dữLiệu.quanHệ("-sởHữu.tàiKhoản", "chuyênMục." + é);
+                                                                                })
+                                                                                .lọc(),
+                                                                            N = $();
+                                                                            t.empty().append(
+                                                                                $("<div>", { class: "container df jcc  " }).append(
+                                                                                    $("<div>", { class: "col-xs-10 ma40 bóng bra30" }).append(
+                                                                                        $("<div>", {
+                                                                                            class: "col-xs-12 tac fs16 ptb25 fwb crd fs15 mb30",
+                                                                                            text: "THÔNG TIN LIÊN HỆ"
+                                                                                        }),
+                                                                                        $("<div>", { class: "col-xs-12 df fww pb25 " }).append(
+                                                                                            (N = $("<div>", { class: "col-xs-10 mlra" }).on("khởiTạos", function () { // Tạo 1 Sự kiện render giao diện -> Dễ dang làm mới giao diện khi cần
+                                                                                                $(this).empty().append(
+                                                                                                    d.map(function (á, à) {
+                                                                                                        return $("<div>", { class: "col-xs-12 pb15 pb0lc" }).sửaLớp(á.bo).sửaLớp("plr15").append(
+                                                                                                            $("<div>", {
+                                                                                                                class: " pl15 pb5",
+                                                                                                                text: á.e
+                                                                                                            }),
+                                                                                                            $("<div>", {
+                                                                                                                id: á.i,
+                                                                                                                contenteditable: true,
+                                                                                                                class: "bgcf b1sd crd plr10 ptb7 col-xs-12 wspw lấyĐc bra15"
+                                                                                                            }).sửaLớp(á.lớp).on("focus", function () {
+                                                                                                                $(this).sửaLớp("bgcyh -đỏ")
+                                                                                                            })
+                                                                                                        )
+                                                                                                    })
+                                                                                                )
+                                                                                            }).trigger("khởiTạos")),
+                                                                                            $("<div>", { class: "col-xs-12 df jcsc mt25" }).append(
+                                                                                                $("<div>", {
+                                                                                                    class:
+                                                                                                        "ptb10 plr50 bra25 c1 fwb ta3 pr fs11 fs1-xs dib bấmĐc shineh z3 bgcod btn",
+                                                                                                    text: "Gửi",
+                                                                                                }).on("click", function () {
+
+                                                                                                    var á = N.toParam(); // Sử dụng $.fn.toParam để lấy nhanh dữ liệu ở các thẻ có ID. Ngoài ra, có thể select đến các thẻ để lấy value như bình thường
+
+                                                                                                    // Kiểm tra người dùng đã nhập đủ dữ liệu hay chưa?
+                                                                                                    d.map(function (é, index) {
+                                                                                                        if (!á[é.i]) {
+                                                                                                            // Không có dữ liệu nhập
+                                                                                                            N.find("#" + é.i).sửaLớp("đỏ"); // Báo lỗi tại ô thiếu thông tin
+
+                                                                                                        } else {
+                                                                                                            N.find("#" + é.i).sửaLớp("-đỏ")
+                                                                                                        }
+
+
+                                                                                                    });
+
+                                                                                                    // Dừng xử lý tiếp nếu nhập thiếu nội dung và thông báo lỗi đến người dùng
+                                                                                                    if (N.find(".đỏ").length)
+                                                                                                        return thôngBáo.lưuÝ("Vui lòng điền đầy đủ thông tin các trường");
+
+                                                                                                    if (!hợpLệ.em.test(á["e"])) {
+                                                                                                        return thôngBáo.lưuÝ("Vui lòng nhập đúng email");
+                                                                                                    } else {
+
+
+                                                                                                        // Đăng bài viết vào không gian liên quan
+                                                                                                        xửLý(
+                                                                                                            "bàiViết.đăng",
+                                                                                                            {
+                                                                                                                d: {
+                                                                                                                    ê: "[Liên hệ] " + á.ê + " - " + á.e, // Tên bài viết
+                                                                                                                    p: "0", // Không công khai bài viết
+                                                                                                                    h: "0", // Không hiển thị bài viết ở trang chủ hệ thống
+                                                                                                                    ộ:
+                                                                                                                        "Họ tên:&nbsp;" +
+                                                                                                                        á.ê.tênHoa() +
+                                                                                                                        "</br><div>Email:&nbsp;" +
+                                                                                                                        á.e +
+                                                                                                                        "</div><b>Nội dung:</b></br>" +
+                                                                                                                        á.ộ, // Nội dung bài viết
+                                                                                                                    ụ: ụ, // Chuyên mục chứa bài viết
+                                                                                                                    à: 158206, // Tài khoản liên quan bài viết
+                                                                                                                    ở: á.ê, // Tên người đăng bài viết. Sử dụng key này khi người dùng đăng bài nhưng không đăng nhập hệ thống
+                                                                                                                },
+                                                                                                            },
+                                                                                                            {
+                                                                                                                chờ: true,
+                                                                                                                bảng: "bàiViết"
+                                                                                                            },
+                                                                                                            function (s) {
+                                                                                                                // s là status báo trang thái xử lý thành công hay không?
+                                                                                                                // Nếu s>0 -> Đăng bài viết thành công. Ngược lại, đăng bài viết không thành công
+                                                                                                                thôngBáo.xácNhận({
+                                                                                                                    tiêuĐề: "THÔNG BÁO",
+                                                                                                                    môTả: s.length > 0 ? "Cảm ơn bạn đã dành thời gian để gửi phản hồi cho chúng tôi. Chúng tôi sẽ cố gắng phản hồi bạn nhanh nhất có thể. Xin cảm ơn." :
+                                                                                                                        "Gửi phản hồi không thành công. Vui lòng thử lại sau.",
+                                                                                                                });
+                                                                                                                // Nếu đăng thành công -> Khởi tạo lại giao diện đăng bài liên hệ
+                                                                                                                s.length > 0 && N.trigger("khởiTạos");
+                                                                                                                s.length > 0 && quảnTrị.thôngBáo(158206, {
+                                                                                                                    ê: á.ê,
+                                                                                                                    ộ: "vừa gửi thông tin liên hệ tới bạn",
+                                                                                                                })
+                                                                                                            }
+                                                                                                        )
+                                                                                                    }
+
+                                                                                                })
+                                                                                            )
+                                                                                        )
+                                                                                    )
+                                                                                )
+                                                                            )
+
+                                                                    }
                                                                     // dạng không bài viết
-                                                                    if (empty(idbv)) {
+                                                                    else if (empty(idbv)) {
                                                                         t.empty().append(
                                                                             empty(mcmc) && $("<div>", {
-
                                                                                 class: "",
                                                                                 text: "Chưa có bài viết liên quan"
                                                                             }),
@@ -1076,8 +1240,9 @@
                                                                                 return $("<div>", { class: "col-md-4 col-sm-6 col-xs-12 pa15 ndung" }).append(
                                                                                     $("<div>", { class: "h1" }).append(
                                                                                         $("<div>", { class: "bóng pa15 h1" }).append(
-                                                                                            $("<div>", { class: "pb32 w1" }).ảnh(itemID, "ụ", true).on("click", function () {
-                                                                                                quảnTrị.xemẢnh(dữLiệu.ảnh(itemID, "ụ", 1000), { // Option của function khung
+                                                                                            $("<div>", { class: "pb32 bgsc bgrn bgpc w1" }).ảnh(itemID, "ụ", true).on("click", function () {
+                                                                                                quảnTrị.xemẢnh(dữLiệu.ảnh(itemID, "ụ", 1000), { // xem ảnh ở dạng khung nổi
+                                                                                                    // Option của function khung 
                                                                                                     tiêuĐề: "Ảnh điểm danh",
                                                                                                     trong: "col-xs-10,col-sm-8,col-md-5,col-lg-3",
                                                                                                     thanh: true, // Mặc định: FALSE với thiết bị không phải mobile
@@ -1174,7 +1339,7 @@
                                                                                                     $("<div>", { class: "w1 bgsc bgpc pb32" }).ảnh(á, "ế", true),
                                                                                                 ).on("click", function () {
                                                                                                     quảnTrị.xemẢnh(dữLiệu.ảnh(á, "ế", 1000), { // Option của function khung
-                                                                                                        tiêuĐề: "Ảnh điểm danh",
+                                                                                                        // tiêuĐề: "Ảnh điểm danh",
                                                                                                         trong: "col-xs-10,col-sm-8,col-md-5,col-lg-3",
                                                                                                         thanh: true, // Mặc định: FALSE với thiết bị không phải mobile
                                                                                                     })
@@ -1346,7 +1511,7 @@
                                             // })
                                             cuộn(0);
                                             thân.empty().append(
-                                                $("<div>", { class: "container w1 mt50 " }).append(
+                                                $("<div>", { class: "container w1 mt75 " }).append(
                                                     $("<div>", { class: "mt25 mb40 plr15" }).append(
                                                         $("<div>", { class: "mtb25" }).append(
                                                             bốCục.vụnBánh(i, {
