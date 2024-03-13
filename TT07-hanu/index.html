@@ -1022,7 +1022,7 @@
                                                     $("<div>", { class: "mt50" }).append(
                                                         $("<div>", { class: "df" }).each(function () {
                                                             var t = $(this)
-                                                            //vụnBánh viết lại
+                                                            //viết lại vụnBánh 
                                                             // Tìm index của phần tử '13538' ụ tổng
                                                             let startIndex = ụTrước.indexOf('13538');
                                                             // Tìm index của phần tử 
@@ -1030,15 +1030,16 @@
                                                             // Tạo mảng mới từ '13538' đến thư mục chuyền vào bao gồm cả hai số này
                                                             let newArr = ụTrước.slice(startIndex, endIndex + 1);
                                                             t.append(
-                                                                (newArr || []).map(function(a, index){
-                                                                    return  $("<div>", { class: "df" }).append(
-                                                                        $("<a>", { 
-                                                                            class:index === newArr.length - 1 ?"crd fwb db ttu":"fwb db ttu",
-                                                                            text: index==0?"Trang Chủ": dữLiệu.tên(a,"ụ") ,
-                                                                            href: index==0? "/" : dữLiệu.url(a,"ụ") }),
-                                                                        $("<div>", { class: "plr5" , icon: index === newArr.length - 1 ?"":"arrow_forward_ios" }),
+                                                                (newArr || []).map(function (a, index) {
+                                                                    return $("<div>", { class: "df" }).append( // trả về giao diện tương ứng
+                                                                        $("<a>", {
+                                                                            class: index === newArr.length - 1 ? "crd fwb db ttu" : "fwb db ttu",
+                                                                            text: index == 0 ? "Trang Chủ" : dữLiệu.tên(a, "ụ"),
+                                                                            href: index == 0 ? "/" : dữLiệu.url(a, "ụ")
+                                                                        }),
+                                                                        $("<div>", { class: "plr5", icon: index === newArr.length - 1 ? "" : "arrow_forward_ios" }),
                                                                     )
-                                                                }) 
+                                                                })
                                                             )
                                                         }),
                                                     ),
@@ -1516,13 +1517,12 @@
                                             //         $("<div>", { class: "lh15", html: d["ộ"] }),
                                             //         $("<div>", { class: "bgsc bgpc wh128" }).ảnh(i, "ế", true), // true xác định kích thước ảnh cần resize
                                             //     );
-
                                             // })
                                             cuộn(0);
                                             thân.empty().append(
                                                 $("<div>", { class: "container w1 mt75 " }).append(
                                                     $("<div>", { class: "mt25 mb40 plr15" }).append(
-                                                        $("<div>", { class: "mtb25" }).append(function () {
+                                                        $("<div>", { class: "mtb25" }).append(
                                                             bốCục.vụnBánh(i, {
                                                                 // i là ID đối tượng xem
                                                                 ọ: "ế", // Loại đối tượng xem (Chuyên mục → "ụ", Bài viết → "ế")
@@ -1534,7 +1534,7 @@
                                                                 menuPhụ: ".menuConChuyênMục",
                                                                 ụ: ụTổng, // ID chuyên mục tổng (Chuyên mục chứa tất cả chuyên mục website)
                                                             })
-                                                        }),
+                                                        ),
 
                                                         $("<div>", { class: "mtb25" }).append(
                                                             bốCục.bàiViết(i, {

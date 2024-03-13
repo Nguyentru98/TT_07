@@ -11,7 +11,7 @@
     <title>Khoa tiếng Trung</title>
     <meta name="google-site-verification" content="C3rLvOFFbqDi_-BAOFxujRlxlGslP_ggG5n7BIc0P4c" />
     <!-- <meta name="description" content="<?php echo $des; ?>" /> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="" /> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/logo-khoa.jpg" />
     <link href="sitemap.xml" />
     <link rel="stylesheet" href="https://thuctap.inevn.com/nguyendinhhuy/css/include.sub.css" />
     <script src="https://cdn.inevn.com/js/jquery.main.isj"></script>
@@ -148,7 +148,7 @@
                                                         // navbar
                                                         $("<div>", { class: "col-md-8 dn-xs", }).append(
                                                             $("<div>", { class: "df h1 jcsb cf bgcrd brl30 aic pa15 tty05 pr bóng", }).append(
-                                                                $("<a>", { class: "db ", icon: "home::vam fs2", href: "/" }),
+                                                                $("<a>", { class: "db shineh", icon: "home::vam fs2", href: "/" }),
                                                                 menuChinh.map(function (i) {
                                                                     return $("<div>", { class: "col-md-2" }).append(
                                                                         $("<a>", { class: "db tac w1 fs1 fwb db cyh", text: dữLiệu.tên(i, "ụ"), href: dữLiệu.url(i, "ụ") })
@@ -320,12 +320,15 @@
                                                                                         },
                                                                                     }, { cache: true, onCache: true, bảng: "bàiViết", delay: 500 },
                                                                                     function renderArticles(bv) {
+                                                                                        spinChờ(true, { mess: "Vui lòng chờ trong giây lát ..." })
                                                                                         $(".ndThongBao").empty();
                                                                                         if (bv == null || bv.length === 0) {
+                                                                                            spinChờ()
                                                                                             $(".ndThongBao").append(
                                                                                                 $("<div>", { text: "Không có bài viết" })
                                                                                             );
                                                                                         } else {
+                                                                                            spinChờ()
                                                                                             $(".ndThongBao").append(
                                                                                                 $("<div>", { class: "baiMoiNhat col-md-6 col-xs-12 plr15-xs pr15 pr15" }),
                                                                                                 $("<div>", { class: "baiCuHon col-md-6 pl15 df fdc jcsb" })
@@ -389,7 +392,7 @@
                                                                         return (index == 1 ? $("<div>", { class: "col-md-4 z9" }) : $("<div>", { class: "col-md-4" })).each(function () {
                                                                             $(this).empty().append(
                                                                                 (index == 1 ? $("<div>", { class: "bgcrd tfs11 pa10" }) : $("<div>", { class: "pa10" })).append(
-                                                                                    $("<div>", { class: "pb32 bgrn bpc bgsc h1" }).ảnh(a, "ụ", true), // Giả sử 'ảnh' là một hàm để thêm nội dung vào div
+                                                                                    $("<a>", { class: "pb32 bgrn bpc bgsc h1 db shineh", href: dữLiệu.url(a, "ụ") }).ảnh(a, "ụ", true), // Giả sử 'ảnh' là một hàm để thêm nội dung vào div
                                                                                 )
                                                                             );
                                                                         });
@@ -423,7 +426,7 @@
                                                                             (bv || []).map(function (el, index) {
                                                                                 return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
                                                                                     $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
-                                                                                        $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
+                                                                                        $("<a>", { class: "bgrn bgsc bgpc pb32 db shineh" ,href: dữLiệu.url(el, "ế")}).ảnh(el, "ế", true),
                                                                                         $("<div>", { class: "df fdc jcsb h1" }).append(
                                                                                             $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
                                                                                             $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
@@ -457,7 +460,7 @@
                                                                     var t = $(this)
                                                                     CẦN.db("chuyênMục.13751", function (i) {
                                                                         return t.empty().append(
-                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 db fs1-xs pa10-xs", text: dữLiệu.tên(13751, "ụ"), href: dữLiệu.url(13751, "ụ") })
+                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 db fs1-xs pa10-xs cyh fwb", text: dữLiệu.tên(13751, "ụ"), href: dữLiệu.url(13751, "ụ") })
                                                                         )
 
                                                                     })
@@ -471,7 +474,7 @@
                                                                     var t = $(this)
                                                                     CẦN.db("chuyênMục.13752", function (i) {
                                                                         return t.empty().append(
-                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 fs1-xs db pa10-xs", text: dữLiệu.tên(13752, "ụ"), href: dữLiệu.url(13752, "ụ") })
+                                                                            $("<a>", { class: "w1 ptb25 cf tac fs15 fs1-xs db pa10-xs cyh fwb", text: dữLiệu.tên(13752, "ụ"), href: dữLiệu.url(13752, "ụ") })
                                                                         )
 
                                                                     })
@@ -500,7 +503,7 @@
                                                                                 // var d = config("bàiViết." + el) || {};
                                                                                 return $("<div>", { class: "col-md-6 col-xs-12 plr10 " }).append(
                                                                                     $("<div>", { class: "bra5 bóng bgcf pa10 df fdc h1" }).append(
-                                                                                        $("<div>", { class: "bgrn bgsc bgpc pb32 " }).ảnh(el, "ế", true),
+                                                                                        $("<a>", { class: "bgrn bgsc bgpc pb32 db shineh", href: dữLiệu.url(el, "ế") }).ảnh(el, "ế", true),
                                                                                         $("<div>", { class: "df fdc jcsb h1" }).append(
                                                                                             $("<a>", { class: "ptb10 fwb db tduh", text: dữLiệu.tên(el, "ế"), href: dữLiệu.url(el, "ế") }),
                                                                                             $("<div>", { class: "tar w1 ", text: " 1/3/2024" }),
@@ -535,34 +538,63 @@
                                                     // hoạt động ngoại khóa
                                                     $("<div>", { class: "mt50 dn-xs" }).append(
                                                         $("<a>", { class: "df w1 jcsc fwb fs2 ptb25 mt25 crd db cpi o08h ", text: dữLiệu.tên(13764, "ụ"), href: dữLiệu.url(13764, "ụ") }),
-                                                        $("<div>", { class: "container ptb25" }).append(
-                                                            $("<div>", { class: "col-md-4  df fdc aife" }).append(
-                                                                $("<div>", { class: "col-md-7 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
-                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/sv_quoc_te.jpg)" }),
-                                                                    $("<div>", { class: "fwb ptb10", text: "CHƯƠNG TRÌNH GIAO LƯU TRẢI NGHIỆM VĂN HÓA VIỆT - TRUNG “CHÀO XUÂN 2024”" })
-                                                                ).css("transform", "rotate(349deg)"),
-                                                                $("<div>", { class: "col-md-6 mt50 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
-                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/de_tro_thanh_sv_hanu.jpg)" }),
-                                                                    $("<div>", { class: "fwb ptb10", text: "TUYÊN DƯƠNG “SINH VIÊN 5 TỐT” VÀ “TẬP THỂ 5 TỐT” KHOA TIẾNG TRUNG QUỐC" })
-                                                                ).css("transform", "rotate(10deg)"),
-                                                            ),
-                                                            $("<div>", { class: "col-md-4 " }).append(
-                                                                $("<div>", { class: "col-md-12 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
-                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/trao_doi_giang_vien.jpg)" }),
-                                                                    $("<div>", { class: "fwb ptb10", text: " TỔNG KẾT HOẠT ĐỘNG MẠNG LƯỚI CỰU SINH VIÊN 2023 - VINH DANH CỰU SINH VIÊN CÓ NHIỀU ĐÓNG GÓP CHO NHÀ TRƯỜNG" })
-                                                                ),
-                                                            ),
-                                                            $("<div>", { class: "col-md-4 plr15" }).append(
-                                                                $("<div>", { class: "col-md-8 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
-                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/ttd_4.jpg)" }),
-                                                                    $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
-                                                                ).css("transform", "rotate(10deg)"),
-                                                                $("<div>", { class: "col-md-6 mt25 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
-                                                                    $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/ttd_4_2.jpg)" }),
-                                                                    $("<div>", { class: "fwb ptb10", text: "HỘI THẢO GIỚI THIỆU CHƯƠNG TRÌNH THỰC TẬP HƯỞNG LƯƠNG CHO SINH VIÊN KHOA TIẾNG TRUNG QUỐC TẠI ĐÀI LOAN" })
-                                                                ),
-                                                            ),
-                                                        )
+                                                        $("<div>", { class: "container ptb25 df fww jcsb" }).xửLý("đốiTượng.tải.bàiViết",
+                                                            {
+                                                                d: {
+                                                                    thuộcTính: {
+                                                                        ụ: [13764, "~|"],
+                                                                        p: 1
+                                                                    },
+                                                                    giớiHạn: 3,
+                                                                    sắpXếp: "ấ"
+                                                                }
+
+                                                            },
+                                                            { cache: true, onCache: true, delay: 998, bảng: "bàiViết" },
+                                                            function (bv) {
+                                                                var t = $(this);
+                                                                t.empty().append(
+                                                                    (bv || []).map(function (e, index) {
+                                                                        cl(e, "bvvvvvvvv", 6666)
+                                                                        return $("<div>", { class:"col-md-4 plr15" }).append(
+                                                                            $("<a>", { class:"bgsc bgrn bgpt plr15 pt50 bóng db",href:dữLiệu.url(e,"ế"),style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(   
+                                                                                $("<div>", { class: "pb32 bgsc bgrn bgpc mt25 shineh" }).ảnh(e,"ế",true),
+                                                                                $("<a>", { class: "fwb ptb15 crdh db", text:dữLiệu.tên(e,"ế"),href:dữLiệu.url(e,"ế") })
+                                                                            )
+                                                                        )
+                                                                    })
+                                                                )
+
+                                                            },
+                                                        ),
+
+                                                        // $("<div>", { class: "col-md-4  df fdc aife nk1" }).append(
+                                                        //     $("<div>", { class: "col-md-7 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
+                                                        //         $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/sv_quoc_te.jpg)" }),
+                                                        //         $("<div>", { class: "fwb ptb10", text: "CHƯƠNG TRÌNH GIAO LƯU TRẢI NGHIỆM VĂN HÓA VIỆT - TRUNG “CHÀO XUÂN 2024”" })
+                                                        //     ).css("transform", "rotate(349deg)"),
+                                                        //     $("<div>", { class: "col-md-6 mt50 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
+                                                        //         $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/de_tro_thanh_sv_hanu.jpg)" }),
+                                                        //         $("<div>", { class: "fwb ptb10", text: "TUYÊN DƯƠNG “SINH VIÊN 5 TỐT” VÀ “TẬP THỂ 5 TỐT” KHOA TIẾNG TRUNG QUỐC" })
+                                                        //     ).css("transform", "rotate(10deg)"),
+                                                        // ),
+                                                        // $("<div>", { class: "col-md-4 nk2" }).append(
+                                                        //     $("<div>", { class: "col-md-12 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
+                                                        //         $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/trao_doi_giang_vien.jpg)" }),
+                                                        //         $("<div>", { class: "fwb ptb10", text: " TỔNG KẾT HOẠT ĐỘNG MẠNG LƯỚI CỰU SINH VIÊN 2023 - VINH DANH CỰU SINH VIÊN CÓ NHIỀU ĐÓNG GÓP CHO NHÀ TRƯỜNG" })
+                                                        //     ),
+                                                        // ),
+                                                        // $("<div>", { class: "col-md-4 plr15 nk3" }).append(
+                                                        //     $("<div>", { class: "col-md-8 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
+                                                        //         $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/ttd_4.jpg)" }),
+                                                        //         $("<div>", { class: "fwb ptb10", text: " THAM QUAN TRẢI NGHIỆM TẠI CÔNG TY TNHH WISTRON INFOCOMM VIỆT NAM" })
+                                                        //     ).css("transform", "rotate(10deg)"),
+                                                        //     $("<div>", { class: "col-md-6 mt25 bgsc bgrn bgpc pa15 bóng", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/bg_hdnk.jpg)" }).append(
+                                                        //         $("<div>", { class: "pb32 bgsc bgrn bgpc mt25", style: "background-image:url(https://trunv.thuctap.inevn.com/TT07-Khoa_Trung/assets/ttd_4_2.jpg)" }),
+                                                        //         $("<div>", { class: "fwb ptb10", text: "HỘI THẢO GIỚI THIỆU CHƯƠNG TRÌNH THỰC TẬP HƯỞNG LƯƠNG CHO SINH VIÊN KHOA TIẾNG TRUNG QUỐC TẠI ĐÀI LOAN" })
+                                                        //     ),
+                                                        // ),
+
                                                     ).css("background-color", "antiquewhite"),
 
                                                     // tiện ích khác
@@ -573,7 +605,7 @@
                                                             (config("chuyênLực.13678") || []).map(function (a) {
                                                                 return t.append(
                                                                     $("<div>", { class: "col-md-6 col-xs-12 pa15" }).append(
-                                                                        $("<a>", { class: "df w1 b1s crd bóng pa15 aic db bgcr4h cfh",href:dữLiệu.url(a, "ụ") }).append(
+                                                                        $("<a>", { class: "df w1 b1s crd bóng pa15 aic db tfs09h ta5", href: dữLiệu.url(a, "ụ") }).append(
                                                                             $("<div>", { class: "col-xs-4" }).append(
                                                                                 $("<div>", { class: "wh100 bgso bgrn bgpc" }).ảnh(a, "ụ", true)
                                                                             ),
@@ -825,9 +857,9 @@
                                                                                     return $("<div>", { class: "col-md-4 col-sm-6 col-xs-12 pa15 ndung" }).append(
                                                                                         $("<div>", { class: "h1" }).append(
                                                                                             $("<div>", { class: "bóng pa15 h1" }).append(
-                                                                                                $("<div>", { class: "pb32 w1" }).ảnh(itemID, "ụ", true).on("click", function () {
+                                                                                                $("<div>", { class: "pb32 w1 bgsc bgrn bgpc" }).ảnh(itemID, "ụ", true).on("click", function () {
                                                                                                     quảnTrị.xemẢnh(dữLiệu.ảnh(itemID, "ụ", 1000), { // Option của function khung
-                                                                                                        tiêuĐề: "Ảnh điểm danh",
+                                                                                                        // tiêuĐề: "Ảnh điểm danh",
                                                                                                         trong: "col-xs-10,col-sm-8,col-md-5,col-lg-3",
                                                                                                         thanh: true, // Mặc định: FALSE với thiết bị không phải mobile
                                                                                                     })
